@@ -1,46 +1,9 @@
 import React from 'react';
 import { Grid, Column, ClickableTile } from '@carbon/react';
+import { expertise } from '../../data/siteData';
 import './Expertise.scss';
 
 const Expertise = () => {
-  const expertiseAreas = [
-    {
-      id: 'data-integration',
-      title: 'Data Integration & Intelligence',
-      borderColor: 'purple',
-      items: [
-        'Batch ETL & Real-time Streaming',
-        'Change Data Capture (CDC)',
-        'Data Replication & Synchronization',
-        'Data Governance & Lineage',
-        'Quality Management & Observability',
-      ],
-    },
-    {
-      id: 'agentic-ai',
-      title: 'Agentic AI Solutions',
-      borderColor: 'cyan',
-      items: [
-        'Agent Design & Architecture',
-        'Enterprise AI Implementation',
-        'Production Systems with Governance',
-        'Reasoning Frameworks',
-        'Context Engineering',
-      ],
-    },
-    {
-      id: 'enterprise-arch',
-      title: 'Enterprise Architecture',
-      borderColor: 'magenta',
-      items: [
-        'Scale & Performance Optimization',
-        'Governance & Compliance',
-        'Security & Access Control',
-        'Hybrid Cloud Architecture',
-        'DevOps & AI SDLC',
-      ],
-    },
-  ];
 
   return (
     <section id="expertise" className="expertise-section portfolio-section">
@@ -50,7 +13,7 @@ const Expertise = () => {
         </Column>
         <Column lg={16} md={8} sm={4}>
           <div className="expertise-grid">
-            {expertiseAreas.map((area) => (
+            {expertise.areas.map((area) => (
               <ClickableTile
                 key={area.id}
                 id={area.id}

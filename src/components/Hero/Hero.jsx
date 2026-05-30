@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Grid, Column } from '@carbon/react';
+import { hero } from '../../data/siteData';
 import './Hero.scss';
 
 const Hero = () => {
@@ -8,39 +9,39 @@ const Hero = () => {
       <Grid className="hero-grid">
         <Column lg={16} md={8} sm={4}>
           <div className="hero-content">
-            <h1 className="hero-title">Henry Xiao</h1>
+            <h1 className="hero-title">{hero.title}</h1>
             <p className="hero-subtitle">
-              Agent Builder | Data and AI Customer Success Engineer @IBM FSM
+              {hero.subtitle}
             </p>
             <div className="hero-specialties">
               <p className="hero-specialty-label">Specializing in:</p>
               <ul className="hero-specialty-list">
-                <li>Agentic AI for Enterprise Data Engineering</li>
-                <li>Production-Grade AI Systems with Governance</li>
-                <li>Data Integration & Intelligence at Scale</li>
+                {hero.specialties.map((specialty, index) => (
+                  <li key={index}>{specialty}</li>
+                ))}
               </ul>
             </div>
             <div className="hero-cta">
               <Button
                 kind="primary"
                 size="lg"
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById(hero.cta.primary.target)?.scrollIntoView({ behavior: 'smooth' })}
               >
-                View Projects
+                {hero.cta.primary.text}
               </Button>
               <Button
                 kind="secondary"
                 size="lg"
-                onClick={() => document.getElementById('writing')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById(hero.cta.secondary.target)?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Read Writing
+                {hero.cta.secondary.text}
               </Button>
               <Button
                 kind="tertiary"
                 size="lg"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById(hero.cta.tertiary.target)?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Contact Me
+                {hero.cta.tertiary.text}
               </Button>
             </div>
           </div>

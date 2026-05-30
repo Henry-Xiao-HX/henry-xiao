@@ -1,55 +1,9 @@
 import React from 'react';
 import { Grid, Column, Tag } from '@carbon/react';
+import { skills } from '../../data/siteData';
 import './Skills.scss';
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      id: 'ai-ml',
-      title: 'AI & Machine Learning',
-      color: 'purple',
-      skills: [
-        'LangChain',
-        'Anthropic Claude',
-        'OpenAI',
-        'IBM watsonx',
-        'Agent Frameworks',
-        'RAG',
-        'Fine-tuning',
-        'MCP Servers',
-      ],
-    },
-    {
-      id: 'data-engineering',
-      title: 'Data Engineering',
-      color: 'cyan',
-      skills: [
-        'Python',
-        'SQL',
-        'Apache Kafka',
-        'IBM DataStage',
-        'Data Governance',
-        'Lineage Tracking',
-        'Quality Management',
-        'CDC & Replication',
-      ],
-    },
-    {
-      id: 'tools-platforms',
-      title: 'Tools & Platforms',
-      color: 'magenta',
-      skills: [
-        'React',
-        'Node.js',
-        'Docker',
-        'Kubernetes',
-        'Git',
-        'IBM Cloud Pak for Data',
-        'AWS',
-        'Terraform',
-      ],
-    },
-  ];
 
   return (
     <section id="skills" className="skills-section portfolio-section">
@@ -59,7 +13,7 @@ const Skills = () => {
         </Column>
         <Column lg={16} md={8} sm={4}>
           <div className="skills-container">
-            {skillCategories.map((category) => (
+            {skills.categories.map((category) => (
               <div key={category.id} className="skills-category">
                 <h3 className="skills-category__title">{category.title}</h3>
                 <div className="skills-category__tags">
