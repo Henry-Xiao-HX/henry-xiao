@@ -1,0 +1,28 @@
+// Carbon Design System Token Overrides
+// Portfolio-specific color palette
+
+// Primary Colors (Purple - AI/Data signature)
+$portfolio-primary: #8a3ffc;      // purple-60
+$portfolio-secondary: #6929c4;    // purple-70
+
+// Accent Colors
+$portfolio-accent-cyan: #1192e8;    // cyan-50
+$portfolio-accent-magenta: #ee5396; // magenta-50
+$portfolio-accent-teal: #009d9a;    // teal-50
+
+// Backgrounds
+$portfolio-bg-main: #ffffff;        // white
+$portfolio-bg-layer-1: #f4f4f4;     // gray-10
+$portfolio-bg-layer-2: #ffffff;     // white
+
+// Text
+$portfolio-text-primary: #161616;   // gray-100
+$portfolio-text-secondary: #525252; // gray-70
+$portfolio-text-inverse: #ffffff;   // white
+
+// Gradients
+$portfolio-gradient-hero: linear-gradient(135deg, #ee5396 0%, #8a3ffc 40%, #1192e8 100%);
+$portfolio-gradient-accent: linear-gradient(90deg, #6929c4 0%, #ee5396 100%);
+$portfolio-gradient-subtle: linear-gradient(180deg, rgba(138, 63, 252, 0.1) 0%, rgba(17, 146, 232, 0.1) 100%);
+
+// Made with Bob

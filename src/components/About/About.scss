@@ -1,0 +1,118 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/type' as *;
+
+.about-section {
+  background-color: $portfolio-bg-main;
+}
+
+.section-title {
+  @include type-style('heading-05');
+  color: $portfolio-text-primary;
+  margin-bottom: $spacing-09;
+  padding-bottom: $spacing-05;
+  border-bottom: 2px solid $portfolio-primary;
+}
+
+.about-image-col {
+  margin-bottom: $spacing-07;
+  
+  @include breakpoint(md) {
+    margin-bottom: 0;
+  }
+}
+
+.about-image-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: $portfolio-gradient-subtle;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed $portfolio-primary;
+  
+  .placeholder-content {
+    text-align: center;
+    color: $portfolio-text-secondary;
+    
+    p {
+      margin: 0;
+      
+      &:first-child {
+        @include type-style('body-02');
+        font-weight: 600;
+        color: $portfolio-primary;
+      }
+    }
+    
+    .placeholder-note {
+      @include type-style('caption-01');
+      margin-top: $spacing-03;
+    }
+  }
+}
+
+.about-content {
+  p {
+    @include type-style('body-02');
+    color: $portfolio-text-primary;
+    line-height: 1.6;
+    margin-bottom: $spacing-05;
+  }
+  
+  .about-intro {
+    font-weight: 500;
+  }
+  
+  .about-approach {
+    color: $portfolio-text-secondary;
+  }
+}
+
+.about-focus {
+  margin-top: $spacing-07;
+  
+  .focus-title {
+    @include type-style('heading-03');
+    color: $portfolio-text-primary;
+    margin-bottom: $spacing-05;
+  }
+  
+  .focus-list {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      padding: $spacing-05;
+      margin-bottom: $spacing-05;
+      background-color: $portfolio-bg-layer-1;
+      border-radius: 4px;
+      border-left: 4px solid $portfolio-primary;
+      @include transition-moderate;
+      
+      &:hover {
+        transform: translateX(4px);
+        border-left-color: $portfolio-accent-cyan;
+      }
+      
+      strong {
+        @include type-style('body-02');
+        display: block;
+        color: $portfolio-text-primary;
+        margin-bottom: $spacing-02;
+        font-weight: 600;
+      }
+      
+      span {
+        @include type-style('body-01');
+        color: $portfolio-text-secondary;
+        display: block;
+      }
+    }
+  }
+}
+
+// Made with Bob

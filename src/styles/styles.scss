@@ -1,0 +1,73 @@
+// Main stylesheet - Import Carbon and custom styles
+@use '@carbon/react';
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+
+@use './variables' as *;
+@use './mixins' as *;
+@use './typography' as *;
+
+// Global styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $portfolio-bg-main;
+  color: $portfolio-text-primary;
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Respect reduced motion preference
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Main container
+.portfolio-container {
+  width: 100%;
+  max-width: 1584px;
+  margin: 0 auto;
+}
+
+// Section spacing
+.portfolio-section {
+  padding: $spacing-10 $spacing-05;
+  
+  @include breakpoint(md) {
+    padding: $spacing-12 $spacing-07;
+  }
+}
+
+// Skip to main content link (accessibility)
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: $spacing-03 $spacing-05;
+  background-color: $portfolio-primary;
+  color: $portfolio-text-inverse;
+  text-decoration: none;
+  
+  &:focus {
+    left: 0;
+    top: 0;
+  }
+}
+
+// Made with Bob

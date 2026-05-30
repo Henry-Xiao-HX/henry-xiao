@@ -1,0 +1,137 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/type' as *;
+
+.hero-section {
+  background: $portfolio-gradient-hero;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: $spacing-10 0;
+  position: relative;
+  
+  @include breakpoint(md) {
+    min-height: 90vh;
+  }
+}
+
+.hero-grid {
+  width: 100%;
+}
+
+.hero-content {
+  color: $portfolio-text-inverse;
+  padding: $spacing-07;
+  
+  @include breakpoint(md) {
+    padding: $spacing-09;
+  }
+  
+  @include breakpoint(lg) {
+    padding: $spacing-10;
+  }
+}
+
+.hero-title {
+  @include type-style('heading-07');
+  font-weight: 700;
+  margin-bottom: $spacing-05;
+  color: $portfolio-text-inverse;
+  
+  @include breakpoint(sm) {
+    font-size: 3rem;
+  }
+  
+  @include breakpoint(md) {
+    font-size: 3.5rem;
+  }
+  
+  @include breakpoint(lg) {
+    font-size: 4rem;
+  }
+}
+
+.hero-subtitle {
+  @include type-style('heading-03');
+  margin-bottom: $spacing-07;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  
+  @include breakpoint(md) {
+    @include type-style('heading-04');
+  }
+}
+
+.hero-specialties {
+  margin-bottom: $spacing-09;
+}
+
+.hero-specialty-label {
+  @include type-style('heading-02');
+  margin-bottom: $spacing-05;
+  color: $portfolio-text-inverse;
+  font-weight: 600;
+}
+
+.hero-specialty-list {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    @include type-style('body-02');
+    padding-left: $spacing-05;
+    margin-bottom: $spacing-03;
+    position: relative;
+    color: rgba(255, 255, 255, 0.95);
+    
+    &::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: $portfolio-accent-cyan;
+      font-weight: bold;
+    }
+  }
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-05;
+  
+  .cds--btn {
+    @include transition-moderate;
+    
+    &.cds--btn--primary {
+      background-color: $portfolio-text-inverse;
+      color: $portfolio-primary;
+      
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+    }
+    
+    &.cds--btn--secondary {
+      background-color: transparent;
+      border-color: $portfolio-text-inverse;
+      color: $portfolio-text-inverse;
+      
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+    
+    &.cds--btn--tertiary {
+      background-color: transparent;
+      color: $portfolio-text-inverse;
+      
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
+
+// Made with Bob

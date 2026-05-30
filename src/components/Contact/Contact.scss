@@ -1,0 +1,108 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/type' as *;
+
+.contact-section {
+  background-color: $portfolio-bg-layer-1;
+}
+
+.contact-info-col {
+  margin-bottom: $spacing-07;
+  
+  @include breakpoint(md) {
+    margin-bottom: 0;
+  }
+}
+
+.contact-info {
+  &__title {
+    @include type-style('heading-03');
+    color: $portfolio-text-primary;
+    margin-bottom: $spacing-05;
+    font-weight: 600;
+  }
+  
+  &__description {
+    @include type-style('body-02');
+    color: $portfolio-text-secondary;
+    line-height: 1.6;
+  }
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-05;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: $spacing-05;
+  padding: $spacing-05;
+  background-color: $portfolio-bg-main;
+  border-radius: 4px;
+  border-left: 4px solid $portfolio-primary;
+  text-decoration: none;
+  @include transition-moderate;
+  
+  &:hover {
+    transform: translateX(4px);
+    border-left-color: $portfolio-accent-cyan;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+    .contact-link__icon {
+      background-color: $portfolio-accent-cyan;
+      
+      svg {
+        fill: $portfolio-text-inverse;
+      }
+    }
+  }
+  
+  &:focus {
+    outline: 2px solid $portfolio-primary;
+    outline-offset: 2px;
+  }
+  
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: $portfolio-bg-layer-1;
+    border-radius: 50%;
+    flex-shrink: 0;
+    @include transition-moderate;
+    
+    svg {
+      fill: $portfolio-primary;
+      @include transition-moderate;
+    }
+  }
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-02;
+  }
+  
+  &__label {
+    @include type-style('label-01');
+    color: $portfolio-text-secondary;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  &__value {
+    @include type-style('body-02');
+    color: $portfolio-text-primary;
+    font-weight: 500;
+  }
+}
+
+// Made with Bob

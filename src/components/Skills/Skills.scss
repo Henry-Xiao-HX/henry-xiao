@@ -1,0 +1,71 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/type' as *;
+
+.skills-section {
+  background-color: $portfolio-bg-main;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-09;
+}
+
+.skills-category {
+  &__title {
+    @include type-style('heading-03');
+    color: $portfolio-text-primary;
+    margin-bottom: $spacing-05;
+    font-weight: 600;
+    padding-bottom: $spacing-03;
+    border-bottom: 2px solid $portfolio-bg-layer-1;
+  }
+  
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-03;
+  }
+}
+
+.skill-tag {
+  @include transition-fast;
+  cursor: default;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Custom tag colors
+.cds--tag--purple {
+  background-color: rgba(138, 63, 252, 0.1);
+  color: $portfolio-primary;
+  
+  &:hover {
+    background-color: rgba(138, 63, 252, 0.15);
+  }
+}
+
+.cds--tag--cyan {
+  background-color: rgba(17, 146, 232, 0.1);
+  color: $portfolio-accent-cyan;
+  
+  &:hover {
+    background-color: rgba(17, 146, 232, 0.15);
+  }
+}
+
+.cds--tag--magenta {
+  background-color: rgba(238, 83, 150, 0.1);
+  color: $portfolio-accent-magenta;
+  
+  &:hover {
+    background-color: rgba(238, 83, 150, 0.15);
+  }
+}
+
+// Made with Bob

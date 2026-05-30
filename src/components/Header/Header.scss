@@ -1,0 +1,47 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use '@carbon/react/scss/spacing' as *;
+
+.cds--header {
+  background-color: $portfolio-primary;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+  .cds--header__name {
+    color: $portfolio-text-inverse;
+    font-weight: 600;
+    
+    &:hover {
+      color: $portfolio-text-inverse;
+    }
+  }
+  
+  .cds--header__menu-item {
+    color: $portfolio-text-inverse;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: $portfolio-text-inverse;
+    }
+  }
+  
+  .cds--header__menu-button {
+    svg {
+      fill: $portfolio-text-inverse;
+    }
+  }
+}
+
+.cds--side-nav {
+  background-color: $portfolio-primary;
+  
+  .cds--side-nav__link {
+    color: $portfolio-text-inverse;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: $portfolio-text-inverse;
+    }
+  }
+}
+
+// Made with Bob

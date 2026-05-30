@@ -1,0 +1,100 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/type' as *;
+
+.expertise-section {
+  background-color: $portfolio-bg-layer-1;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-05;
+  
+  @include breakpoint(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-07;
+  }
+  
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.expertise-tile {
+  @include hover-lift;
+  min-height: 300px;
+  padding: $spacing-07;
+  background-color: $portfolio-bg-main;
+  border-left: 4px solid $portfolio-primary;
+  
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  &--purple {
+    border-left-color: $portfolio-primary;
+    
+    &:hover {
+      border-left-color: $portfolio-secondary;
+      box-shadow: 0 8px 24px rgba(138, 63, 252, 0.2);
+    }
+  }
+  
+  &--cyan {
+    border-left-color: $portfolio-accent-cyan;
+    
+    &:hover {
+      box-shadow: 0 8px 24px rgba(17, 146, 232, 0.2);
+    }
+  }
+  
+  &--magenta {
+    border-left-color: $portfolio-accent-magenta;
+    
+    &:hover {
+      box-shadow: 0 8px 24px rgba(238, 83, 150, 0.2);
+    }
+  }
+  
+  &__title {
+    @include type-style('heading-03');
+    color: $portfolio-text-primary;
+    margin-bottom: $spacing-05;
+    font-weight: 600;
+  }
+  
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      @include type-style('body-01');
+      color: $portfolio-text-secondary;
+      padding: $spacing-03 0;
+      padding-left: $spacing-05;
+      position: relative;
+      
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: $portfolio-primary;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// Override Carbon ClickableTile styles
+.cds--tile--clickable {
+  &:focus {
+    outline: 2px solid $portfolio-primary;
+    outline-offset: 2px;
+  }
+}
+
+// Made with Bob

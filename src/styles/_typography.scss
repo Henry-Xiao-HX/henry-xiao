@@ -1,0 +1,45 @@
+// Typography customization using Carbon type tokens
+@use '@carbon/react/scss/type' as *;
+
+// Heading styles
+.heading-01 {
+  @include type-style('heading-07'); // 54px, Bold - Hero title
+  font-weight: 700;
+}
+
+.heading-02 {
+  @include type-style('heading-05'); // 32px, Regular - Section titles
+}
+
+.heading-03 {
+  @include type-style('heading-03'); // 20px, Regular - Subsections
+}
+
+.heading-04 {
+  @include type-style('heading-02'); // 16px, Semibold - Card titles
+  font-weight: 600;
+}
+
+// Body text
+.body-text {
+  @include type-style('body-02'); // 16px, Regular - Main content
+}
+
+.body-small {
+  @include type-style('body-01'); // 14px, Regular - Helper text
+}
+
+.caption-text {
+  @include type-style('caption-01'); // 12px, Regular - Captions
+}
+
+// Code styles
+.code-inline {
+  @include type-style('code-02'); // 14px, Mono - Inline code
+}
+
+.code-block {
+  @include type-style('code-01'); // 12px, Mono - Code blocks
+}
+
+// Made with Bob

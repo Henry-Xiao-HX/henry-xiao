@@ -1,0 +1,112 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/type' as *;
+
+.projects-section {
+  background-color: $portfolio-bg-main;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-05;
+}
+
+.project-tile {
+  @include transition-moderate;
+  background-color: $portfolio-bg-layer-1;
+  border-left: 4px solid $portfolio-primary;
+  
+  &:hover {
+    border-left-color: $portfolio-accent-cyan;
+  }
+  
+  .project-tile__title {
+    @include type-style('heading-03');
+    color: $portfolio-text-primary;
+    margin-bottom: $spacing-03;
+    font-weight: 600;
+  }
+  
+  .project-tile__description {
+    @include type-style('body-02');
+    color: $portfolio-text-secondary;
+    margin-bottom: $spacing-05;
+    line-height: 1.5;
+  }
+  
+  .project-tile__tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-03;
+    margin-top: $spacing-05;
+    
+    .cds--tag {
+      @include transition-fast;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.project-tile__details {
+  padding-top: $spacing-05;
+  
+  .project-tile__details-title {
+    @include type-style('heading-02');
+    color: $portfolio-text-primary;
+    margin-bottom: $spacing-05;
+    font-weight: 600;
+  }
+  
+  .project-tile__details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 $spacing-07 0;
+    
+    li {
+      @include type-style('body-01');
+      color: $portfolio-text-secondary;
+      padding: $spacing-03 0;
+      padding-left: $spacing-05;
+      position: relative;
+      line-height: 1.5;
+      
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: $portfolio-primary;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  .project-tile__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-03;
+    padding-top: $spacing-05;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Override Carbon ExpandableTile styles
+.cds--tile--expandable {
+  &:focus {
+    outline: 2px solid $portfolio-primary;
+    outline-offset: 2px;
+  }
+  
+  .cds--tile__chevron {
+    svg {
+      fill: $portfolio-primary;
+    }
+  }
+}
+
+// Made with Bob
