@@ -1,0 +1,134 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/type' as *;
+
+.projects-page {
+  min-height: 100vh;
+  padding: $spacing-09 0;
+
+  @include breakpoint-down(md) {
+    padding: $spacing-07 0;
+  }
+
+  &__breadcrumb {
+    margin-bottom: $spacing-07;
+  }
+
+  &__header {
+    margin-bottom: $spacing-09;
+
+    @include breakpoint-down(md) {
+      margin-bottom: $spacing-07;
+    }
+  }
+
+  &__title {
+    @include type-style('heading-05');
+    font-weight: 600;
+    margin-bottom: $spacing-05;
+    color: $text-primary;
+  }
+
+  &__subtitle {
+    @include type-style('body-long-02');
+    color: $text-secondary;
+    max-width: 42rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: $spacing-06;
+
+    @include breakpoint-down(md) {
+      grid-template-columns: 1fr;
+      gap: $spacing-05;
+    }
+  }
+}
+
+.project-card {
+  height: 100%;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  &__header {
+    margin-bottom: $spacing-05;
+  }
+
+  &__title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $spacing-03;
+    margin-bottom: $spacing-03;
+  }
+
+  &__title {
+    @include type-style('heading-03');
+    color: $text-primary;
+    flex: 1;
+  }
+
+  &__year {
+    @include type-style('label-01');
+    color: $text-secondary;
+    white-space: nowrap;
+  }
+
+  &__status {
+    margin-bottom: $spacing-04;
+  }
+
+  &__description {
+    @include type-style('body-short-01');
+    color: $text-secondary;
+    margin-bottom: $spacing-05;
+  }
+
+  &__tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-03;
+  }
+
+  &__details {
+    padding-top: $spacing-05;
+  }
+
+  &__details-title {
+    @include type-style('heading-compact-01');
+    color: $text-primary;
+    margin-bottom: $spacing-04;
+  }
+
+  &__details-list {
+    @include type-style('body-short-01');
+    color: $text-secondary;
+    margin-bottom: $spacing-06;
+    padding-left: $spacing-05;
+
+    li {
+      margin-bottom: $spacing-03;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-03;
+    flex-wrap: wrap;
+  }
+}
+
+// Made with Bob

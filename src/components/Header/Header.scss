@@ -1,46 +1,101 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 @use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
 
 .cds--header {
-  background-color: $portfolio-primary;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: $portfolio-bg-main;
+  border-bottom: 2px solid $portfolio-bg-layer-1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   
   .cds--header__name {
-    color: $portfolio-text-inverse;
-    font-weight: 600;
+    color: $portfolio-text-primary;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    transition: all 0.2s ease;
     
     &:hover {
-      color: $portfolio-text-inverse;
+      color: $portfolio-primary;
     }
   }
   
   .cds--header__menu-item {
-    color: $portfolio-text-inverse;
+    color: $portfolio-text-primary;
+    font-weight: 500;
+    transition: all 0.2s ease;
     
     &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: $portfolio-text-inverse;
+      background-color: $portfolio-bg-layer-1;
+      color: $portfolio-primary;
+    }
+    
+    &:focus {
+      outline: 2px solid $portfolio-primary;
+      outline-offset: -2px;
     }
   }
   
   .cds--header__menu-button {
     svg {
-      fill: $portfolio-text-inverse;
+      fill: $portfolio-text-primary;
+    }
+    
+    &:hover {
+      background-color: $portfolio-bg-layer-1;
+    }
+  }
+  
+  .cds--header__global {
+    .cds--header__action {
+      color: $portfolio-text-primary;
+      transition: all 0.2s ease;
+      
+      svg {
+        fill: $portfolio-text-primary;
+      }
+      
+      &:hover {
+        background-color: $portfolio-bg-layer-1;
+        color: $portfolio-primary;
+        
+        svg {
+          fill: $portfolio-primary;
+        }
+      }
+      
+      &:focus {
+        outline: 2px solid $portfolio-primary;
+        outline-offset: -2px;
+      }
     }
   }
 }
 
 .cds--side-nav {
-  background-color: $portfolio-primary;
+  background-color: $portfolio-bg-main;
+  border-right: 1px solid $portfolio-bg-layer-1;
   
   .cds--side-nav__link {
-    color: $portfolio-text-inverse;
+    color: $portfolio-text-primary;
+    font-weight: 500;
+    transition: all 0.2s ease;
     
     &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: $portfolio-text-inverse;
+      background-color: $portfolio-bg-layer-1;
+      color: $portfolio-primary;
     }
+    
+    &:focus {
+      outline: 2px solid $portfolio-primary;
+      outline-offset: -2px;
+    }
+  }
+  
+  .cds--side-nav__link--current {
+    background-color: rgba(138, 63, 252, 0.1);
+    border-left: 3px solid $portfolio-primary;
+    color: $portfolio-primary;
   }
 }
 

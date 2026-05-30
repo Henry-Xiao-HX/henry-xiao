@@ -1,12 +1,9 @@
 import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import PortfolioHeader from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Expertise from './components/Expertise/Expertise';
-import Projects from './components/Projects/Projects';
-import Writing from './components/Writing/Writing';
-import Skills from './components/Skills/Skills';
-import Contact from './components/Contact/Contact';
+import HomePage from './pages/HomePage';
+import ProjectsPage from './pages/ProjectsPage';
+import WritingPage from './pages/WritingPage';
 import './styles/styles.scss';
 
 function App() {
@@ -15,16 +12,16 @@ function App() {
       <a href="#main-content" className="skip-to-main">
         Skip to main content
       </a>
-      <PortfolioHeader />
-      <main id="main-content" className="portfolio-container">
-        <Hero />
-        <About />
-        <Expertise />
-        <Projects />
-        <Writing />
-        <Skills />
-        <Contact />
-      </main>
+      <Router>
+        <PortfolioHeader />
+        <main id="main-content" className="portfolio-container">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/writing" element={<WritingPage />} />
+          </Routes>
+        </main>
+      </Router>
     </div>
   );
 }
