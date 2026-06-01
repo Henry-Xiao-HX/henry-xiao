@@ -5,7 +5,7 @@
 
 export const personalInfo = {
   name: 'Henry Xiao',
-  title: 'Agent Builder | Data and AI Customer Success Engineer @IBM FSM',
+  title: 'Agent Builder | Data and AI Customer Success Engineer @IBM FSM | Community Leader for IBM FSM CSE Community Hub',
   email: 'your-email@example.com',
   linkedin: 'henry-xiao',
   github: 'henry-xiao',
@@ -18,7 +18,7 @@ export const hero = {
   specialties: [
     'Agentic AI for Enterprise Data Engineering',
     'Production-Grade AI Systems with Governance',
-    'Data Integration & Intelligence at Scale',
+    'Community leader for IBM FSM CSE Community Hub',
   ],
   cta: {
     primary: { text: 'View Projects', target: 'projects' },

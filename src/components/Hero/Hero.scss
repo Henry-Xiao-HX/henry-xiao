@@ -1,16 +1,17 @@
-@use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 @use '@carbon/react/scss/spacing' as *;
 @use '@carbon/react/scss/breakpoint' as *;
 @use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/theme' as *;
 
 .hero-section {
-  background: $portfolio-gradient-hero;
+  background: #0043ce; // IBM Blue 70
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: $spacing-10 0;
+  padding: $spacing-13 0;
   position: relative;
+  overflow: hidden;
   
   @include breakpoint(md) {
     min-height: 90vh;
@@ -19,79 +20,143 @@
 
 .hero-grid {
   width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content-col {
+  display: flex;
+  align-items: center;
 }
 
 .hero-content {
-  color: $portfolio-text-inverse;
   padding: $spacing-07;
   
   @include breakpoint(md) {
-    padding: $spacing-09;
+    padding: $spacing-09 $spacing-07;
   }
   
   @include breakpoint(lg) {
-    padding: $spacing-10;
+    padding: $spacing-10 $spacing-09;
   }
 }
 
-.hero-title {
-  @include type-style('heading-07');
-  font-weight: 700;
+.hero-eyebrow {
+  @include type-style('label-01');
+  color: #0f62fe;
+  text-transform: uppercase;
+  letter-spacing: 0.32px;
   margin-bottom: $spacing-05;
-  color: $portfolio-text-inverse;
-  
-  @include breakpoint(sm) {
-    font-size: 3rem;
-  }
+  font-weight: 600;
+  display: inline-block;
+  padding: $spacing-02 $spacing-04;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(15, 98, 254, 0.15);
+}
+
+.hero-title {
+  @include type-style('heading-05');
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: $spacing-06;
+  color: #ffffff;
+  line-height: 1.2;
   
   @include breakpoint(md) {
-    font-size: 3.5rem;
+    @include type-style('heading-06');
   }
   
   @include breakpoint(lg) {
-    font-size: 4rem;
+    max-width: 95%;
   }
 }
 
 .hero-subtitle {
   @include type-style('heading-03');
-  margin-bottom: $spacing-07;
-  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: $spacing-09;
+  color: #ffffff;
   font-weight: 400;
+  line-height: 1.4;
+  max-width: 90%;
+  opacity: 0.95;
   
   @include breakpoint(md) {
-    @include type-style('heading-04');
+    max-width: 85%;
+  }
+  
+  @include breakpoint(lg) {
+    max-width: 80%;
   }
 }
 
 .hero-specialties {
-  margin-bottom: $spacing-09;
+  margin-bottom: $spacing-10;
+  padding: $spacing-06 $spacing-07;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 4px solid #78a9ff;
+  border-radius: 4px;
+  box-shadow:
+    0 4px 16px rgba(15, 98, 254, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-left-color: #a6c8ff;
+    transform: translateY(-2px);
+    box-shadow:
+      0 8px 24px rgba(15, 98, 254, 0.15),
+      0 12px 40px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .hero-specialty-label {
-  @include type-style('heading-02');
+  @include type-style('productive-heading-03');
   margin-bottom: $spacing-05;
-  color: $portfolio-text-inverse;
+  color: #ffffff;
   font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .hero-specialty-list {
   list-style: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-04;
+  
+  @include breakpoint(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-05;
+  }
   
   li {
-    @include type-style('body-02');
-    padding-left: $spacing-05;
-    margin-bottom: $spacing-03;
+    @include type-style('body-01');
+    padding-left: $spacing-06;
     position: relative;
-    color: rgba(255, 255, 255, 0.95);
+    color: #ffffff;
+    opacity: 0.95;
+    transition: all 0.2s ease;
     
     &::before {
-      content: '•';
+      content: '→';
       position: absolute;
       left: 0;
-      color: $portfolio-accent-cyan;
-      font-weight: bold;
+      color: #78a9ff;
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+    
+    &:hover {
+      opacity: 1;
+      transform: translateX(4px);
+      
+      &::before {
+        color: #a6c8ff;
+      }
     }
   }
 }
@@ -102,36 +167,95 @@
   gap: $spacing-05;
   
   .cds--btn {
-    @include transition-moderate;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
     
     &.cds--btn--primary {
-      background-color: $portfolio-text-inverse;
-      color: $portfolio-primary;
+      background-color: #ffffff;
+      color: #0f62fe;
+      border: none;
+      box-shadow: 0 4px 12px rgba(15, 98, 254, 0.2);
       
       &:hover {
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: #f4f4f4;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(15, 98, 254, 0.3);
+      }
+      
+      &:active {
+        transform: translateY(0);
       }
     }
     
-    &.cds--btn--secondary {
+    &.cds--btn--ghost {
       background-color: transparent;
-      border-color: $portfolio-text-inverse;
-      color: $portfolio-text-inverse;
+      color: #ffffff;
+      border: 2px solid rgba(255, 255, 255, 0.5);
       
       &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.15);
+        border-color: #ffffff;
       }
-    }
-    
-    &.cds--btn--tertiary {
-      background-color: transparent;
-      color: $portfolio-text-inverse;
       
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+      &:active {
+        background-color: rgba(255, 255, 255, 0.25);
       }
     }
   }
+}
+
+.hero-visual-col {
+  display: none;
+  
+  @include breakpoint(lg) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-06;
+  padding: $spacing-07;
+  width: 100%;
+}
+
+.hero-stat-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(24px);
+  padding: $spacing-07;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 4px solid #78a9ff;
+  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(15, 98, 254, 0.1);
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-left-color: #a6c8ff;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow:
+      0 8px 24px rgba(15, 98, 254, 0.15),
+      0 16px 48px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.hero-stat-value {
+  @include type-style('heading-05');
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: $spacing-03;
+  letter-spacing: -0.02em;
+}
+
+.hero-stat-label {
+  @include type-style('label-02');
+  color: #ffffff;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.32px;
+  font-weight: 500;
 }
 
 // Made with Bob
