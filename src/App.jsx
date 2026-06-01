@@ -4,6 +4,7 @@ import PortfolioHeader from './components/Header/Header';
 import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
 import WritingPage from './pages/WritingPage';
+import ArchitecturePage from './pages/ArchitecturePage';
 import './styles/styles.scss';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/writing" element={<WritingPage />} />
+            <Route path="/architecture" element={<ArchitecturePage />} />
           </Routes>
         </main>
       </Router>

@@ -65,6 +65,7 @@ const PortfolioHeader = () => {
                   <HeaderMenuItem element={Link} to="/">Home</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/projects">Projects</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/writing">Writing</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="/architecture">Architecture</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/#contact">Contact</HeaderMenuItem>
                 </>
               )}
@@ -114,6 +115,7 @@ const PortfolioHeader = () => {
                       <HeaderMenuItem element={Link} to="/">Home</HeaderMenuItem>
                       <HeaderMenuItem element={Link} to="/projects">Projects</HeaderMenuItem>
                       <HeaderMenuItem element={Link} to="/writing">Writing</HeaderMenuItem>
+                      <HeaderMenuItem element={Link} to="/architecture">Architecture</HeaderMenuItem>
                       <HeaderMenuItem element={Link} to="/#contact">Contact</HeaderMenuItem>
                     </>
                   )}

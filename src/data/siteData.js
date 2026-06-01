@@ -278,5 +278,40 @@ export const milestones = {
     },
   ],
 };
+export const architectureDiagrams = [
+  {
+    id: 'bob-datastage',
+    title: 'Bob + DataStage: Automated ISX Export Analysis',
+    description: 'Automated analysis of IBM DataStage ISX exports using Bob AI agent for intelligent job flow analysis, dependency mapping, and optimization recommendations.',
+    image: '/images/architecture/architectre_bob_datastage_ISX_analysis.png',
+    tags: ['Bob', 'DataStage', 'ISX', 'Automation', 'Analysis'],
+    date: '2026',
+  },
+  {
+    id: 'bob-context-engineering',
+    title: 'Bob + Context Engineering: Metadata-Driven Model Accuracy',
+    description: 'Leveraging metadata management to enhance AI model accuracy through intelligent context engineering, improving data lineage understanding and governance.',
+    image: '/images/architecture/architecture_bob_context_engineering.png',
+    tags: ['Bob', 'Context Engineering', 'Metadata', 'AI Accuracy', 'Governance'],
+    date: '2026',
+  },
+  {
+    id: 'bob-optim-tdm',
+    title: 'Bob + Optim TDM: Production-Like Test Data',
+    description: 'Enabling developers to test applications with production-like data using Bob AI agent integrated with IBM Optim Test Data Management for intelligent data provisioning.',
+    image: '/images/architecture/architecture_bob_optim_tdm.png',
+    tags: ['Bob', 'Optim', 'TDM', 'Test Data', 'DevOps'],
+    date: '2026',
+  },
+  {
+    id: 'data-fabric-overview',
+    title: 'Data Fabric Overview: Overarching Portfolio',
+    description: 'Comprehensive data fabric architecture showcasing the complete portfolio of data integration, governance, and AI capabilities across the enterprise ecosystem.',
+    image: '/images/architecture/architecture_data_fabric_overview.png',
+    tags: ['Data Fabric', 'Portfolio', 'Integration', 'Enterprise', 'Architecture'],
+    date: '2026',
+  },
+];
+
 
 // Made with Bob
