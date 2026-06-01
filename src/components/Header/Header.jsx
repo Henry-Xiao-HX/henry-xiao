@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 import {
   Header,
   HeaderContainer,
@@ -33,7 +33,18 @@ const LinkedInIcon = () => (
 
 const PortfolioHeader = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === '/';
+
+  // Handle navigation to homepage sections from other pages
+  const handleSectionClick = (sectionId) => (e) => {
+    if (!isHomePage) {
+      e.preventDefault();
+      // Navigate to homepage with section hash
+      navigate(`/#${sectionId}`);
+    }
+    // If already on homepage, let the default anchor behavior work
+  };
 
   return (
     <HeaderContainer
@@ -51,24 +62,13 @@ const PortfolioHeader = () => {
               Henry Xiao
             </HeaderName>
             <HeaderNavigation aria-label="Portfolio Navigation">
-              {isHomePage ? (
-                <>
-                  <HeaderMenuItem href="#about">About</HeaderMenuItem>
-                  <HeaderMenuItem href="#expertise">Expertise</HeaderMenuItem>
-                  <HeaderMenuItem href="#projects">Projects</HeaderMenuItem>
-                  <HeaderMenuItem href="#writing">Writing</HeaderMenuItem>
-                  <HeaderMenuItem href="#skills">Skills</HeaderMenuItem>
-                  <HeaderMenuItem href="#contact">Contact</HeaderMenuItem>
-                </>
-              ) : (
-                <>
-                  <HeaderMenuItem element={Link} to="/">Home</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/projects">Projects</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/writing">Writing</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/architecture">Architecture</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/#contact">Contact</HeaderMenuItem>
-                </>
-              )}
+              <HeaderMenuItem element={Link} to="/#about" onClick={handleSectionClick('about')}>About</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/projects">Projects</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/writing">Publications</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/architecture">Architectures</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/#expertise" onClick={handleSectionClick('expertise')}>Expertise</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/#skills" onClick={handleSectionClick('skills')}>Skills</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/#contact" onClick={handleSectionClick('contact')}>Contact</HeaderMenuItem>
             </HeaderNavigation>
             <HeaderGlobalBar>
               <HeaderGlobalAction
@@ -101,24 +101,13 @@ const PortfolioHeader = () => {
             >
               <SideNavItems>
                 <HeaderSideNavItems>
-                  {isHomePage ? (
-                    <>
-                      <HeaderMenuItem href="#about">About</HeaderMenuItem>
-                      <HeaderMenuItem href="#expertise">Expertise</HeaderMenuItem>
-                      <HeaderMenuItem href="#projects">Projects</HeaderMenuItem>
-                      <HeaderMenuItem href="#writing">Writing</HeaderMenuItem>
-                      <HeaderMenuItem href="#skills">Skills</HeaderMenuItem>
-                      <HeaderMenuItem href="#contact">Contact</HeaderMenuItem>
-                    </>
-                  ) : (
-                    <>
-                      <HeaderMenuItem element={Link} to="/">Home</HeaderMenuItem>
-                      <HeaderMenuItem element={Link} to="/projects">Projects</HeaderMenuItem>
-                      <HeaderMenuItem element={Link} to="/writing">Writing</HeaderMenuItem>
-                      <HeaderMenuItem element={Link} to="/architecture">Architecture</HeaderMenuItem>
-                      <HeaderMenuItem element={Link} to="/#contact">Contact</HeaderMenuItem>
-                    </>
-                  )}
+                  <HeaderMenuItem element={Link} to="/#about" onClick={handleSectionClick('about')}>About</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="/projects">Projects</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="/writing">Publications</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="/architecture">Architectures</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="/#expertise" onClick={handleSectionClick('expertise')}>Expertise</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="/#skills" onClick={handleSectionClick('skills')}>Skills</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="/#contact" onClick={handleSectionClick('contact')}>Contact</HeaderMenuItem>
                 </HeaderSideNavItems>
               </SideNavItems>
             </SideNav>
