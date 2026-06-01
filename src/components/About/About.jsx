@@ -13,7 +13,7 @@ const About = () => {
         <Column lg={4} md={2} sm={4} className="about-image-col">
           <div className="about-image-placeholder">
             <img
-              src="/images/about/techXchange.jpg"
+              src="/images/about/ibm-bee.jpg"
               alt="Henry Xiao speaking at TechXchange"
               className="about-image"
             />

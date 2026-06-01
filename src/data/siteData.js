@@ -383,5 +383,41 @@ export const projects = [
   },
 ];
 
+export const articles = [
+  {
+    id: 'metadata-context-engineering',
+    title: 'Metadata-Driven Context Engineering',
+    date: 'March 6, 2026',
+    readTime: '8 min',
+    excerpt: 'Explore how context engineering, enabled with governed metadata, allow enterprise agents to reason effectively without suffering from context pollution or information overload.',
+    fullDescription: 'Exploring how context engineering, combined with governed metadata, enables enterprise agents to reason effectively without suffering from context pollution or information overload.',
+    tags: ['AI', 'Data Engineering', 'Metadata', 'Context Management'],
+    url: 'https://medium.com/@henry-xiao-hx/metadata-driven-context-engineering-for-ai-agents-a67446ff4ba1',
+    status: 'Published',
+  },
+  {
+    id: 'llm-wiki-pattern',
+    title: 'Applying Karpathy’s LLM Wiki Pattern: Building a Compounding Knowledge Base for Tech Sellers with IBM Bob',
+    date: 'April 27, 2026',
+    readTime: '6 min',
+    excerpt: 'Knowledge management patterns for Customer Success Engineers: Structuring information for optimal retrieval and reasoning.',
+    fullDescription: 'Introducing the LLM Wiki Pattern for CSEs: Learn how to apply Karpathy LLM wiki to manage personal knowledge as a CSE.',
+    tags: ['Knowledge Management', 'RAG', 'Information Architecture', 'AI Systems'],
+    url: 'https://levelup.gitconnected.com/applying-karpathys-llm-wiki-pattern-building-a-compounding-knowledge-base-for-tech-sellers-with-fef594872168',
+    status: 'Published',
+  },
+    {
+    id: 'bob-data-pipeline-optimization',
+    title: 'Data Pipeline Optimization with Karpathy Autoresearch and IBM Bob',
+    date: 'April 8, 2026',
+    readTime: '6 min',
+    excerpt: 'The project explores how an autonomous agent (IBM Bob) can optimize data pipelines by navigating the trade-offs between speed, cloud cost, and resource utilization.',
+    fullDescription: 'This article documents a technical experiment applying Andrej Karpathy’s Autoresearch methodology, originally designed for ML model optimization, to data engineering pipeline. The project explores how an autonomous agent (IBM Bob) can optimize data pipelines by navigating the trade-offs between speed, cloud cost, and resource utilization.',
+    tags: ['Data Optimization', 'Agentic AI', 'Andrej Karpathy', 'IBM Bob'],
+    url: 'https://levelup.gitconnected.com/data-pipeline-optimization-with-karpathy-autoresearch-and-ibm-bob-8cc9c9c3017d',
+    status: 'Published',
+  },
+];
+
 
 // Made with Bob

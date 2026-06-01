@@ -65,7 +65,7 @@ const PortfolioHeader = () => {
               <HeaderMenuItem element={Link} to="/#about" onClick={handleSectionClick('about')}>About</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/#milestones" onClick={handleSectionClick('milestones')}>2026 Highlights</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/projects">Projects</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/writing">Publications</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/writing">Articles</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/architecture">Architectures</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/#expertise" onClick={handleSectionClick('expertise')}>Expertise</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/#skills" onClick={handleSectionClick('skills')}>Skills</HeaderMenuItem>
@@ -105,7 +105,7 @@ const PortfolioHeader = () => {
                   <HeaderMenuItem element={Link} to="/#about" onClick={handleSectionClick('about')}>About</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/#milestones" onClick={handleSectionClick('milestones')}>2026 Highlights</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/projects">Projects</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/writing">Publications</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="/writing">Articles</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/architecture">Architectures</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/#expertise" onClick={handleSectionClick('expertise')}>Expertise</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/#skills" onClick={handleSectionClick('skills')}>Skills</HeaderMenuItem>
