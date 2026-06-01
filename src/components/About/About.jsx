@@ -12,10 +12,11 @@ const About = () => {
         </Column>
         <Column lg={4} md={2} sm={4} className="about-image-col">
           <div className="about-image-placeholder">
-            <div className="placeholder-content">
-              <p>Professional Photo</p>
-              <p className="placeholder-note">(To be added)</p>
-            </div>
+            <img
+              src="/images/about/techXchange.jpg"
+              alt="Henry Xiao speaking at TechXchange"
+              className="about-image"
+            />
           </div>
         </Column>
         <Column lg={12} md={6} sm={4}>

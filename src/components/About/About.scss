@@ -27,32 +27,18 @@
 .about-image-placeholder {
   width: 100%;
   aspect-ratio: 1;
-  background: $portfolio-gradient-subtle;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px dashed $portfolio-primary;
-  
-  .placeholder-content {
-    text-align: center;
-    color: $portfolio-text-secondary;
-    
-    p {
-      margin: 0;
-      
-      &:first-child {
-        @include type-style('body-02');
-        font-weight: 600;
-        color: $portfolio-primary;
-      }
-    }
-    
-    .placeholder-note {
-      @include type-style('caption-01');
-      margin-top: $spacing-03;
-    }
-  }
+  overflow: hidden;
+  background: $portfolio-gradient-subtle;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .about-content {
