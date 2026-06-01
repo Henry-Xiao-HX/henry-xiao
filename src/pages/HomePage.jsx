@@ -13,10 +13,10 @@ const HomePage = () => {
     <div className="home-page">
       <Hero />
       <About />
-      <Expertise />
       <Milestones />
       <Projects />
       <Writing />
+      <Expertise />
       <Skills />
       <Contact />
     </div>

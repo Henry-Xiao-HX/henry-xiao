@@ -83,8 +83,16 @@
     white-space: nowrap;
   }
 
-  &__status {
+  &__badges {
+    display: flex;
+    gap: $spacing-03;
+    align-items: center;
     margin-bottom: $spacing-04;
+    flex-wrap: wrap;
+  }
+
+  &__status {
+    // Status styling handled by badges container
   }
 
   &__description {

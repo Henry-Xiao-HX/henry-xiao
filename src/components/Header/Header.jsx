@@ -63,6 +63,7 @@ const PortfolioHeader = () => {
             </HeaderName>
             <HeaderNavigation aria-label="Portfolio Navigation">
               <HeaderMenuItem element={Link} to="/#about" onClick={handleSectionClick('about')}>About</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/#milestones" onClick={handleSectionClick('milestones')}>2026 Highlights</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/projects">Projects</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/writing">Publications</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/architecture">Architectures</HeaderMenuItem>
@@ -102,6 +103,7 @@ const PortfolioHeader = () => {
               <SideNavItems>
                 <HeaderSideNavItems>
                   <HeaderMenuItem element={Link} to="/#about" onClick={handleSectionClick('about')}>About</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="/#milestones" onClick={handleSectionClick('milestones')}>2026 Highlights</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/projects">Projects</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/writing">Publications</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/architecture">Architectures</HeaderMenuItem>

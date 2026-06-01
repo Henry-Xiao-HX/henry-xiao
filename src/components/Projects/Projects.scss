@@ -23,11 +23,31 @@
     border-left-color: $portfolio-accent-cyan;
   }
   
+  .project-tile__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $spacing-05;
+    margin-bottom: $spacing-03;
+    
+    @include breakpoint-down(md) {
+      flex-direction: column;
+      gap: $spacing-03;
+    }
+  }
+  
   .project-tile__title {
     @include type-style('heading-03');
     color: $portfolio-text-primary;
-    margin-bottom: $spacing-03;
     font-weight: 600;
+    flex: 1;
+  }
+  
+  .project-tile__badges {
+    display: flex;
+    gap: $spacing-03;
+    align-items: center;
+    flex-shrink: 0;
   }
   
   .project-tile__description {

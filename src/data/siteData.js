@@ -6,10 +6,10 @@
 export const personalInfo = {
   name: 'Henry Xiao',
   title: 'Agent Builder | Data and AI Customer Success Engineer @IBM FSM | Community Leader for IBM FSM CSE Community Hub',
-  email: 'your-email@example.com',
-  linkedin: 'henry-xiao',
-  github: 'henry-xiao',
-  medium: '@henry-xiao',
+  email: 'henryxiao2001@gmail.com',
+  linkedin: 'henry-xiao-hx/',
+  github: 'Henry-Xiao-HX',
+  medium: '@henry-xiao-hx',
 };
 
 export const hero = {
@@ -17,35 +17,37 @@ export const hero = {
   subtitle: personalInfo.title,
   specialties: [
     'Agentic AI for Enterprise Data Engineering',
-    'Production-Grade AI Systems with Governance',
-    'Community leader for IBM FSM CSE Community Hub',
+    'Technical Enablement and Thought Leadership across IBM Teams',
+    'Community Leader for IBM FSM CSE Community Hub',
   ],
   cta: {
     primary: { text: 'View Projects', target: 'projects' },
-    secondary: { text: 'Read Writing', target: 'writing' },
+    secondary: { text: 'Read Publications', target: 'writing' },
     tertiary: { text: 'Contact Me', target: 'contact' },
   },
 };
 
 export const about = {
-  intro: `I'm a Data & AI Customer Success Engineer at IBM, specializing in agentic data engineering—bridging AI innovation with engineering rigor for financial services clients.`,
-  approach: `My approach: Modular, open architecture using Python SDK + MCP servers, positioning agentic data engineering as an execution model rather than product dependency.`,
+  intro: `I'm a Data & AI Customer Success Engineer at IBM, focusing on helping organizations adopt and accelerate Data & AI solutions: from modernizing data architectures to implementing Agentic AI capabilities that drive operational efficiency, strengthen risk management, and support regulatory compliance.
+
+`,
+  approach: `My approach: modular, open architecture that bridges agentic innovation with engineering rigor.`,
   focusAreas: [
     {
-      title: 'Data Integration Architecture',
-      description: 'Batch ETL, streaming, CDC, replication',
+      title: 'Agentic AI',
+      description: 'Demystifying agentic AI for data engineers by bridging innovation with engineering rigor through modular, open architectures that preserve determinism, reproducibility, and control',
     },
     {
-      title: 'Agentic AI Implementation',
-      description: 'IBM Bob, watsonx.orchestrate, MCP servers',
+      title: 'Data Integration',
+      description: 'Championing agentic data engineering as an execution model using MCP server and AI orchestration across Batch ETL, real-time data streaming, Change Data Capture, and other integration modes.',
+    },
+    {
+      title: 'Data Intelligence',
+      description: 'Enabling natural language catalog discovery, metadata analysis, and lineage exploration through agent-orchestrated workflows that accelerate root cause analysis and data quality management.',
     },
     {
       title: 'Enterprise Governance',
-      description: 'Lineage, policy enforcement, compliance',
-    },
-    {
-      title: 'Hybrid Cloud Solutions',
-      description: 'Multi-cloud and on-premises architectures',
+      description: 'Positioning governed, explainable agentic workflows through human-in-the-loop approvals, guardrails, and standardized configurations that maintain engineering-friendly transparency',
     },
   ],
 };
@@ -144,9 +146,7 @@ export const expertise = {
       items: [
         'Batch ETL & Real-time Streaming',
         'Change Data Capture (CDC)',
-        'Data Replication & Synchronization',
-        'Data Governance & Lineage',
-        'Quality Management & Observability',
+        'Data Governance (Data Lineage, Metadata Management, Data Quality Management)',
       ],
     },
     {
@@ -157,20 +157,19 @@ export const expertise = {
         'Agent Design & Architecture',
         'Enterprise AI Implementation',
         'Production Systems with Governance',
-        'Reasoning Frameworks',
         'Context Engineering',
       ],
     },
     {
-      id: 'enterprise-arch',
-      title: 'Enterprise Architecture',
+      id: 'financial-services',
+      title: 'Financial Services Business Units',
       borderColor: 'magenta',
       items: [
-        'Scale & Performance Optimization',
-        'Governance & Compliance',
-        'Security & Access Control',
-        'Hybrid Cloud Architecture',
-        'DevOps & AI SDLC',
+        'Human Resources & Talent Management',
+        'Procurement & Vendor Management',
+        'Finance & Accounting Operations',
+        'Risk & Compliance',
+        'Technology & Operations',
       ],
     },
   ],
@@ -310,6 +309,77 @@ export const architectureDiagrams = [
     image: '/images/architecture/architecture_data_fabric_overview.png',
     tags: ['Data Fabric', 'Portfolio', 'Integration', 'Enterprise', 'Architecture'],
     date: '2026',
+  },
+];
+
+export const projects = [
+  {
+    id: 'fsm-dii-cse-bob',
+    title: 'FSM-DII-CSE-BOB-ASSET',
+    description: 'Enterprise AI enablement platform for FSM Data & AI Customer Success Engineers',
+    techStack: ['Python', 'LangChain', 'MCP', 'watsonx', 'IBM Cloud'],
+    details: [
+      'Built modular AI agent framework for enterprise data engineering tasks',
+      'Implemented MCP server architecture for tool extensibility',
+      'Integrated with IBM watsonx for production-grade AI capabilities',
+      'Designed governance and compliance features for financial services',
+    ],
+    githubUrl: '#',
+    demoUrl: '#',
+    status: 'In Production',
+    isIBMInternal: true,
+    year: '2024',
+  },
+  {
+    id: 'custom-bob-mode',
+    title: 'CSE LLM Wiki',
+    description: 'Specialized productivity tool for CSE team workflows',
+    techStack: ['IBM Bob', 'AI Agent'],
+    details: [
+      'Created custom mode for IBM Bob AI Agent',
+      'Streamlined common CSE workflows and documentation tasks',
+      'Integrated with team knowledge base and resources',
+      'Improved team productivity through context-aware assistance',
+    ],
+    githubUrl: 'https://github.com/Henry-Xiao-HX/CSE-LLM-WIKI',
+    demoUrl: 'https://github.com/Henry-Xiao-HX/CSE-LLM-WIKI',
+    status: 'Active',
+    isIBMInternal: true,
+    year: '2024',
+  },
+  {
+    id: 'personal-chef-agent',
+    title: 'Personal Chef Agent',
+    description: 'AI agent with conversation memory for personalized cooking assistance',
+    techStack: ['Python', 'Anthropic Claude', 'LangChain', 'Vector DB'],
+    details: [
+      'Implemented conversation memory and context management',
+      'Built personalized recipe recommendation system',
+      'Designed natural language interface for cooking queries',
+      'Demonstrated practical application of agentic AI patterns',
+    ],
+    githubUrl: '#',
+    demoUrl: '#',
+    status: 'Prototype',
+    isIBMInternal: false,
+    year: '2024',
+  },
+  {
+    id: 'metadata-context-engineering',
+    title: 'Metadata-Driven Context Engineering',
+    description: 'Data engineering agent with intelligent context management',
+    techStack: ['Python', 'Apache Kafka', 'DataStage', 'RAG'],
+    details: [
+      'Developed metadata-driven approach to context engineering',
+      'Implemented intelligent data lineage tracking',
+      'Built automated data quality monitoring system',
+      'Demonstrated scalable architecture for enterprise data workflows',
+    ],
+    githubUrl: '#',
+    demoUrl: '#',
+    status: 'Research',
+    isIBMInternal: true,
+    year: '2024',
   },
 ];
 
