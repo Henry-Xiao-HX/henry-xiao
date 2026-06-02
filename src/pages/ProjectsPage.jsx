@@ -1,20 +1,10 @@
 import React from 'react';
 import { Grid, Column, ExpandableTile, TileAboveTheFoldContent, TileBelowTheFoldContent, Tag, Button, Breadcrumb, BreadcrumbItem } from '@carbon/react';
 import { Link } from 'react-router-dom';
-import { projects } from '../data/siteData';
+import { projects, projectStatusConfig } from '../data/siteData';
 import './ProjectsPage.scss';
 
 const ProjectsPage = () => {
-
-  const getStatusType = (status) => {
-    const statusMap = {
-      'In Production': 'green',
-      'Active': 'blue',
-      'Prototype': 'purple',
-      'Research': 'cyan',
-    };
-    return statusMap[status] || 'gray';
-  };
 
   return (
     <div className="projects-page">
@@ -60,7 +50,11 @@ const ProjectsPage = () => {
                           IBM Internal
                         </Tag>
                       )}
-                      <Tag type={getStatusType(project.status)} size="md" className="project-card__status">
+                      <Tag
+                        type={projectStatusConfig[project.status]?.color || 'cool-gray'}
+                        size="md"
+                        className="project-card__status"
+                      >
                         {project.status}
                       </Tag>
                     </div>

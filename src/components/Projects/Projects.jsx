@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Column, ExpandableTile, TileAboveTheFoldContent, TileBelowTheFoldContent, Tag, Button } from '@carbon/react';
-import { projects } from '../../data/siteData';
+import { projects, projectStatusConfig } from '../../data/siteData';
 import './Projects.scss';
 
 const Projects = () => {
@@ -30,7 +30,10 @@ const Projects = () => {
                           IBM Internal
                         </Tag>
                       )}
-                      <Tag type="cool-gray" size="md">
+                      <Tag
+                        type={projectStatusConfig[project.status]?.color || 'cool-gray'}
+                        size="md"
+                      >
                         {project.status}
                       </Tag>
                     </div>
