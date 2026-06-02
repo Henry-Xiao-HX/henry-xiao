@@ -64,9 +64,9 @@ const PortfolioHeader = () => {
             <HeaderNavigation aria-label="Portfolio Navigation">
               <HeaderMenuItem element={Link} to="/#about" onClick={handleSectionClick('about')}>About</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/#milestones" onClick={handleSectionClick('milestones')}>2026 Highlights</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/projects">Projects</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/writing">Articles</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/architecture">Architectures</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/#projects" onClick={handleSectionClick('projects')}>Projects</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/#writing" onClick={handleSectionClick('writing')}>Articles</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/#architecture" onClick={handleSectionClick('architecture')}>Architectures</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/#expertise" onClick={handleSectionClick('expertise')}>Expertise</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/#skills" onClick={handleSectionClick('skills')}>Skills</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/#contact" onClick={handleSectionClick('contact')}>Contact</HeaderMenuItem>
@@ -104,8 +104,10 @@ const PortfolioHeader = () => {
                 <HeaderSideNavItems>
                   <HeaderMenuItem element={Link} to="/#about" onClick={handleSectionClick('about')}>About</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/#milestones" onClick={handleSectionClick('milestones')}>2026 Highlights</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/projects">Projects</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/writing">Articles</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="/#projects" onClick={handleSectionClick('projects')}>Featured Projects</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="/projects">All Projects</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="/#writing" onClick={handleSectionClick('writing')}>Featured Articles</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="/writing">All Articles</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/architecture">Architectures</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/#expertise" onClick={handleSectionClick('expertise')}>Expertise</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/#skills" onClick={handleSectionClick('skills')}>Skills</HeaderMenuItem>

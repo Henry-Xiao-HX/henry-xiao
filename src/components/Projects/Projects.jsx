@@ -7,13 +7,22 @@ import './Projects.scss';
 
 const Projects = ({ preview = false, limit = 3 }) => {
   const displayProjects = preview ? projects.slice(0, limit) : projects;
+  const totalCount = projects.length;
+  const showingCount = displayProjects.length;
 
   return (
     <section id="projects" className="projects-section portfolio-section">
       <Grid>
         <Column lg={16} md={8} sm={4}>
           <div className="section-header">
-            <h2 className="section-title">{preview ? 'Featured Projects' : 'Projects'}</h2>
+            <div className="section-header__title-group">
+              <h2 className="section-title">{preview ? 'Featured Projects' : 'Projects'}</h2>
+              {preview && (
+                <span className="section-count-badge">
+                  Showing {showingCount} of {totalCount}
+                </span>
+              )}
+            </div>
             {preview && (
               <Button
                 as={Link}
@@ -85,6 +94,26 @@ const Projects = ({ preview = false, limit = 3 }) => {
               </ExpandableTile>
             ))}
           </div>
+          {preview && (
+            <div className="view-all-container">
+              <div className="view-all-divider">
+                <span className="view-all-divider__text">
+                  {totalCount - showingCount} more project{totalCount - showingCount !== 1 ? 's' : ''} available
+                </span>
+              </div>
+              <Button
+                as={Link}
+                to="/projects"
+                kind="primary"
+                size="lg"
+                renderIcon={ArrowRight}
+                iconDescription="View all projects"
+                className="view-all-button"
+              >
+                View All {totalCount} Projects
+              </Button>
+            </div>
+          )}
         </Column>
       </Grid>
     </section>

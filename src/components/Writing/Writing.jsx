@@ -7,13 +7,22 @@ import './Writing.scss';
 
 const Writing = ({ preview = false, limit = 3 }) => {
   const displayArticles = preview ? articles.slice(0, limit) : articles;
+  const totalCount = articles.length;
+  const showingCount = displayArticles.length;
 
   return (
     <section id="writing" className="writing-section portfolio-section">
       <Grid>
         <Column lg={16} md={8} sm={4}>
           <div className="section-header">
-            <h2 className="section-title">{preview ? 'Featured Articles' : 'Articles'}</h2>
+            <div className="section-header__title-group">
+              <h2 className="section-title">{preview ? 'Featured Articles' : 'Articles'}</h2>
+              {preview && (
+                <span className="section-count-badge">
+                  Showing {showingCount} of {totalCount}
+                </span>
+              )}
+            </div>
             {preview && (
               <Button
                 as={Link}
@@ -55,14 +64,21 @@ const Writing = ({ preview = false, limit = 3 }) => {
           </div>
           {preview && (
             <div className="view-all-container">
+              <div className="view-all-divider">
+                <span className="view-all-divider__text">
+                  {totalCount - showingCount} more article{totalCount - showingCount !== 1 ? 's' : ''} available
+                </span>
+              </div>
               <Button
                 as={Link}
                 to="/writing"
-                kind="tertiary"
+                kind="primary"
+                size="lg"
                 renderIcon={ArrowRight}
                 iconDescription="View all articles"
+                className="view-all-button"
               >
-                View All Articles
+                View All {totalCount} Articles
               </Button>
             </div>
           )}

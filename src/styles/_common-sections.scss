@@ -1,6 +1,8 @@
 // Common section styles shared across components
 @use '@carbon/react/scss/spacing' as *;
 @use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/type' as *;
+@use './variables' as *;
 
 .section-header {
   display: flex;
@@ -17,6 +19,76 @@
   
   .section-title {
     margin-bottom: 0;
+  }
+}
+
+// Shared styles for section header title groups
+.section-header__title-group {
+  display: flex;
+  align-items: center;
+  gap: $spacing-05;
+  flex-wrap: wrap;
+}
+
+.section-count-badge {
+  @include type-style('label-01');
+  background-color: $portfolio-primary;
+  color: $portfolio-bg-main;
+  padding: $spacing-02 $spacing-04;
+  border-radius: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+// Shared styles for view-all components
+.view-all-container {
+  margin-top: $spacing-07;
+}
+
+.view-all-divider {
+  position: relative;
+  text-align: center;
+  margin: $spacing-07 0 $spacing-06;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      $portfolio-primary 20%,
+      $portfolio-primary 80%,
+      transparent 100%
+    );
+    opacity: 0.3;
+  }
+  
+  &__text {
+    @include type-style('label-01');
+    position: relative;
+    background-color: $portfolio-bg-main;
+    padding: 0 $spacing-05;
+    color: $portfolio-text-secondary;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+.view-all-button {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  
+  @include breakpoint(md) {
+    max-width: 500px;
   }
 }
 

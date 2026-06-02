@@ -93,4 +93,21 @@
   }
 }
 
+// Component-specific overrides for Writing section
+.writing-section {
+  .section-count-badge {
+    background-color: $portfolio-accent-cyan;
+  }
+  
+  .view-all-divider::before {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      $portfolio-accent-cyan 20%,
+      $portfolio-accent-cyan 80%,
+      transparent 100%
+    );
+  }
+}
+
 // Made with Bob
