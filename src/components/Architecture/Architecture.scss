@@ -1,0 +1,103 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/common-sections' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/type' as *;
+
+.architecture-section {
+  background-color: $portfolio-bg-main;
+}
+
+.architecture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $spacing-05;
+  margin-top: $spacing-06;
+}
+
+.architecture-card {
+  @include transition-moderate;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $portfolio-bg-layer-1;
+  border-left: 4px solid $portfolio-primary;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-left-color: $portfolio-accent-cyan;
+  }
+
+  &__image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: $portfolio-bg-layer-2;
+    margin-bottom: $spacing-05;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+    .architecture-card:hover & {
+      transform: scale(1.05);
+    }
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 $spacing-05 $spacing-05;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $spacing-03;
+    margin-bottom: $spacing-04;
+  }
+
+  &__title {
+    @include type-style('heading-03');
+    color: $portfolio-text-primary;
+    font-weight: 600;
+    flex: 1;
+  }
+
+  &__date {
+    @include type-style('label-01');
+    color: $portfolio-text-secondary;
+    white-space: nowrap;
+  }
+
+  &__description {
+    @include type-style('body-02');
+    color: $portfolio-text-secondary;
+    margin-bottom: $spacing-05;
+    flex: 1;
+    line-height: 1.5;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-03;
+    
+    .cds--tag {
+      @include transition-fast;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+// Made with Bob

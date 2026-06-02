@@ -1,20 +1,36 @@
 import React from 'react';
-import { Grid, Column, ClickableTile } from '@carbon/react';
+import { Link } from 'react-router-dom';
+import { Grid, Column, ClickableTile, Button } from '@carbon/react';
 import { ArrowRight } from '@carbon/icons-react';
 import { articles } from '../../data/siteData';
 import './Writing.scss';
 
-const Writing = () => {
+const Writing = ({ preview = false, limit = 3 }) => {
+  const displayArticles = preview ? articles.slice(0, limit) : articles;
 
   return (
     <section id="writing" className="writing-section portfolio-section">
       <Grid>
         <Column lg={16} md={8} sm={4}>
-          <h2 className="section-title">Articles</h2>
+          <div className="section-header">
+            <h2 className="section-title">{preview ? 'Featured Articles' : 'Articles'}</h2>
+            {preview && (
+              <Button
+                as={Link}
+                to="/writing"
+                kind="tertiary"
+                size="sm"
+                renderIcon={ArrowRight}
+                iconDescription="View all articles"
+              >
+                View All Articles
+              </Button>
+            )}
+          </div>
         </Column>
         <Column lg={16} md={8} sm={4}>
           <div className="writing-grid">
-            {articles.map((article) => (
+            {displayArticles.map((article) => (
               <ClickableTile
                 key={article.id}
                 id={article.id}
@@ -37,6 +53,19 @@ const Writing = () => {
               </ClickableTile>
             ))}
           </div>
+          {preview && (
+            <div className="view-all-container">
+              <Button
+                as={Link}
+                to="/writing"
+                kind="tertiary"
+                renderIcon={ArrowRight}
+                iconDescription="View all articles"
+              >
+                View All Articles
+              </Button>
+            </div>
+          )}
         </Column>
       </Grid>
     </section>

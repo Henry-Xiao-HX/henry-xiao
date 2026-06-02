@@ -1,0 +1,23 @@
+// Common section styles shared across components
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $spacing-05;
+  margin-bottom: $spacing-05;
+  
+  @include breakpoint-down(md) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-03;
+  }
+  
+  .section-title {
+    margin-bottom: 0;
+  }
+}
+
+// Made with Bob

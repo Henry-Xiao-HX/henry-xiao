@@ -1,16 +1,18 @@
 // Reusable SCSS Mixins
+@use '@carbon/motion' as *;
+@use '@carbon/react/scss/theme' as *;
 
-// Transition mixins
+// Transition mixins using Carbon motion tokens
 @mixin transition-fast {
-  transition: 150ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  transition: $duration-fast-02 motion(standard, productive);
 }
 
 @mixin transition-moderate {
-  transition: 240ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  transition: $duration-moderate-02 motion(standard, productive);
 }
 
 @mixin transition-slow {
-  transition: 400ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  transition: $duration-slow-01 motion(standard, productive);
 }
 
 // Hover lift effect

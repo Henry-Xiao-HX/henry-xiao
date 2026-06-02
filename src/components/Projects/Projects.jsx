@@ -1,19 +1,36 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Grid, Column, ExpandableTile, TileAboveTheFoldContent, TileBelowTheFoldContent, Tag, Button } from '@carbon/react';
+import { ArrowRight } from '@carbon/icons-react';
 import { projects, projectStatusConfig } from '../../data/siteData';
 import './Projects.scss';
 
-const Projects = () => {
+const Projects = ({ preview = false, limit = 3 }) => {
+  const displayProjects = preview ? projects.slice(0, limit) : projects;
 
   return (
     <section id="projects" className="projects-section portfolio-section">
       <Grid>
         <Column lg={16} md={8} sm={4}>
-          <h2 className="section-title">Projects</h2>
+          <div className="section-header">
+            <h2 className="section-title">{preview ? 'Featured Projects' : 'Projects'}</h2>
+            {preview && (
+              <Button
+                as={Link}
+                to="/projects"
+                kind="tertiary"
+                size="sm"
+                renderIcon={ArrowRight}
+                iconDescription="View all projects"
+              >
+                View All Projects
+              </Button>
+            )}
+          </div>
         </Column>
         <Column lg={16} md={8} sm={4}>
           <div className="projects-grid">
-            {projects.map((project) => (
+            {displayProjects.map((project) => (
               <ExpandableTile
                 key={project.id}
                 id={project.id}
