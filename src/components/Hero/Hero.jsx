@@ -45,16 +45,16 @@ const Hero = () => {
         <Column lg={6} md={2} sm={4} className="hero-visual-col">
           <div className="hero-visual">
             <div className="hero-stat-card">
+              <p className="hero-stat-value">1</p>
+              <p className="hero-stat-label">Community</p>
+            </div>
+            <div className="hero-stat-card">
               <p className="hero-stat-value">3+</p>
               <p className="hero-stat-label">Years Experience</p>
             </div>
             <div className="hero-stat-card">
               <p className="hero-stat-value">20+</p>
               <p className="hero-stat-label">Projects Delivered</p>
-            </div>
-            <div className="hero-stat-card">
-              <p className="hero-stat-value">10+</p>
-              <p className="hero-stat-label">Technologies</p>
             </div>
           </div>
         </Column>

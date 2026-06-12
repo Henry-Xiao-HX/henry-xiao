@@ -96,22 +96,23 @@
     border-bottom: 1px solid $border-subtle-01;
 
     @include breakpoint(lg) {
-      width: 50%;
-      max-width: 600px;
+      width: 100%;
       border-bottom: none;
-      border-right: 1px solid $border-subtle-01;
       padding: $spacing-06;
     }
   }
 
   &__image {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
     max-height: 400px;
     object-fit: contain;
     border-radius: 4px;
     cursor: pointer;
     transition: transform 0.2s ease;
+    margin: 0 auto;
+    display: block;
 
     &:hover {
       transform: scale(1.02);
@@ -202,22 +203,23 @@
     min-height: 400px;
 
     @include breakpoint(lg) {
-      width: 55%;
-      max-width: 700px;
+      width: 100%;
       border-bottom: none;
-      border-right: 1px solid $border-subtle-01;
       padding: $spacing-07;
       min-height: 500px;
     }
   }
 
   &__image {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
     max-height: 450px;
     object-fit: contain;
     border-radius: 4px;
     transition: transform 0.3s ease;
+    margin: 0 auto;
+    display: block;
 
     @include breakpoint(lg) {
       max-height: 550px;

@@ -20,9 +20,9 @@ const Milestones = () => {
 
   // Calculate dynamic positioning based on number of milestones
   const calculatePosition = (index, total) => {
-    if (total === 1) return 50;
+    if (total === 1) return 40;
     const spacing = 80 / (total - 1); // 80% of width divided by gaps
-    return 10 + (index * spacing); // Start at 10%, end at 90%
+    return 5 + (index * spacing); // Start at 5%, end at 85%
   };
 
   // Color scheme that cycles through 5 colors
