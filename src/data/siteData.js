@@ -87,56 +87,6 @@ export const contact = {
   ],
 };
 
-export const skills = {
-  categories: [
-    {
-      id: 'ai-ml',
-      title: 'AI & Machine Learning',
-      color: 'purple',
-      skills: [
-        'LangChain',
-        'Anthropic Claude',
-        'OpenAI',
-        'IBM watsonx',
-        'Agent Frameworks',
-        'RAG',
-        'Fine-tuning',
-        'MCP Servers',
-      ],
-    },
-    {
-      id: 'data-engineering',
-      title: 'Data Engineering',
-      color: 'cyan',
-      skills: [
-        'Python',
-        'SQL',
-        'Apache Kafka',
-        'IBM DataStage',
-        'Data Governance',
-        'Lineage Tracking',
-        'Quality Management',
-        'CDC & Replication',
-      ],
-    },
-    {
-      id: 'tools-platforms',
-      title: 'Tools & Platforms',
-      color: 'magenta',
-      skills: [
-        'React',
-        'Node.js',
-        'Docker',
-        'Kubernetes',
-        'Git',
-        'IBM Cloud Pak for Data',
-        'AWS',
-        'Terraform',
-      ],
-    },
-  ],
-};
-
 export const expertise = {
   areas: [
     {
@@ -148,26 +98,43 @@ export const expertise = {
         'Change Data Capture (CDC)',
         'Data Governance (Data Lineage, Metadata Management, Data Quality Management)',
       ],
-    },
-    {
-      id: 'agentic-ai',
-      title: 'Agentic AI Solutions',
-      borderColor: 'cyan',
-      items: [
-        'Agent Design & Architecture',
-        'Enterprise AI Implementation',
-        'Production Systems with Governance',
-        'Context Engineering',
+      skills: [
+        'Confluent Kafka',
+        'IBM DataStage',
+        'IBM watsonx.data integration',
+        'IBM watsonx.data intelligence'
       ],
     },
     {
-      id: 'financial-services',
-      title: 'Customer Success',
+      id: 'agentic-ai',
+      title: 'Agentic AI',
+      borderColor: 'cyan',
+      items: [
+        'Agent Design & Architecture',
+        'Enterprise AI',
+        'AI Governance',
+        'Context Engineering',
+      ],
+      skills: [
+        'LangChain',
+        'Anthropic Claude',
+        'OpenAI',
+        'IBM watsonx',
+        'IBM Bob',
+      ],
+    },
+    {
+      id: 'customer-success',
+      title: 'Customer Success & Enablement',
       borderColor: 'magenta',
       items: [
         'Competitive Analysis',
         'Business Value Articulation',
         'Client Co-Creation',
+      ],
+      skills: [
+        'Sales Enablement',
+        'Value Proposition Development',
       ],
     },
   ],
@@ -183,13 +150,13 @@ export const milestones = {
       month: 'May',
       date: '5/21/2026',
       title: 'Launch IBM Bob Community Hub',
-      event: 'Community Leadership',
+      event: 'Launching IBM Bob Community Hub for Agentic Center of Excellence',
       location: 'Virtual',
-      description: 'Launched and led the IBM Bob Community Hub, fostering collaboration and knowledge sharing across IBM teams on agentic AI and automation.',
+      description: 'Led development and lauch of IBM Bob Community Hub, a central repository featuring integration patterns and reusable assets of IBM Bob with IBM products.',
       highlights: [
-        'Established community platform for Bob users',
+        'Established community platform for IBM',
         'Coordinated cross-team collaboration',
-        'Knowledge sharing and best practices',
+        '25+ demo assets. 10+ products. 40+ contributors',
       ],
       image: '/images/milestones/Default.png',
     },
@@ -201,11 +168,10 @@ export const milestones = {
       title: 'Present in Worldwide DII CSE Office Hour',
       event: 'IBM Worldwide DII CSE Office Hour',
       location: 'Virtual',
-      description: 'Presented to worldwide Data Integration and Intelligence Customer Success Engineers on advanced techniques and best practices.',
+      description: 'Presented to 80+ Data Integration and Intelligence Customer Success Engineers in IBM across markets. I shared in this session my experience implementing the LLM Wiki pattern (popularized by Andrej Karpathy) with IBM Bob to streamline my daily executions as a CSE.',
       highlights: [
         'Global audience of CSE professionals',
-        'Shared data integration strategies',
-        'Q&A with international teams',
+        'Thought leadership in AI community',
       ],
       image: '/images/milestones/Default.png',
     },
@@ -217,11 +183,10 @@ export const milestones = {
       title: 'Present in Bay Area AI Think Tank',
       event: 'Bay Area AI Think Tank',
       location: 'San Francisco Bay Area',
-      description: 'Participated in Bay Area AI Think Tank discussions on enterprise AI adoption and agentic systems architecture.',
+      description: 'Presented at IBMs Bay Area AI Think Tank, that brought together 30+ developers, designers, and CSEs (both in-person and remote) to explore how AI agents can help us work smarter. I shared in this session my experience implementing the LLM Wiki pattern (popularized by Andrej Karpathy) with IBM Bob to streamline my daily executions as a CSE.',
       highlights: [
         'Thought leadership in AI community',
         'Enterprise AI adoption strategies',
-        'Networking with AI innovators',
       ],
       image: '/images/milestones/BayAreaAIThinkTank.png',
     },
@@ -230,14 +195,13 @@ export const milestones = {
       year: '2026',
       month: 'April',
       date: '4/10/2026',
-      title: "Present in Let's Party with Bob, FSM CSE Entitlements",
+      title: "Present in Bob in the Field, FSM Enablement",
       event: 'FSM CSE Event',
       location: 'Virtual',
-      description: 'Presented on IBM Bob capabilities and CSE entitlements for Financial Services Market team, demonstrating practical applications.',
+      description: 'Presented on leveraging IBM Bob with watsonx.data intelligence/watsonx.data integration MCP servers for Agentic Data Engineering.',
       highlights: [
-        'Bob platform capabilities showcase',
         'FSM-specific use cases',
-        'Interactive demonstrations',
+        'IBM Bob Agentic Data Engineering',
       ],
       image: '/images/milestones/Default.png',
     },
@@ -249,11 +213,11 @@ export const milestones = {
       title: 'Present in FSM DII CSE Office Hour',
       event: 'FSM DII CSE Office Hour',
       location: 'Virtual',
-      description: 'Presented to Financial Services Market Data Integration and Intelligence CSE team on customer success strategies and technical solutions.',
+      description: 'Presented to Financial Services Market, Data Integration and Intelligence, CSE team: Using watsonx.data intelligence MCP with IBM Bob for effective context engineering and metadata governance.',
       highlights: [
-        'FSM-focused data integration insights',
-        'Customer success best practices',
-        'Technical deep-dive sessions',
+        'Open MCP Ecosystem',
+        'Context Engineering for Agents',
+        'Metadata Governance',
       ],
       image: '/images/milestones/Default.png',
     },
@@ -265,11 +229,11 @@ export const milestones = {
       title: 'Featured on FSM Technical Sales Brief',
       event: 'FSM Technical Sales Program',
       location: 'IBM FSM',
-      description: 'Selected for FSM Technical Sales Brief program, contributing technical expertise to sales enablement and customer engagement strategies.',
+      description: 'Featured on quarterly released FSM Technical Sales Brief for my contribution on Agentic Data Engineering, demonstrating agentic workflows for pipeline design, data quality management, and root cause analysis.',
       highlights: [
-        'Technical sales enablement',
-        'Customer engagement strategies',
-        'Cross-functional collaboration',
+        'Agentic Data Engineering',
+        'Technical Sales Enablement',
+        'Customer Engagement Strategies',
       ],
       image: '/images/milestones/Default.png',
     },
@@ -339,10 +303,8 @@ export const projects = [
     description: 'Enterprise AI enablement platform for FSM Data & AI Customer Success Engineers',
     techStack: ['Python', 'MCPs', 'IBM Bob', 'React',],
     details: [
-      'Built modular AI agent framework for enterprise data engineering tasks',
-      'Implemented MCP server architecture for tool extensibility',
-      'Integrated with IBM Bob for production-grade AI capabilities',
-      'Designed governance and compliance features for financial services',
+      'Agentic Center of Excellence for Data & AI',
+      '25+ integration patterns across 10+ products',
     ],
     githubUrl: '#',
     demoUrl: '#',
@@ -353,12 +315,11 @@ export const projects = [
   {
     id: 'custom-bob-mode',
     title: 'CSE LLM Wiki',
-    description: 'Specialized productivity tool for CSE team workflows',
+    description: 'Specialized productivity for CSE team',
     techStack: ['IBM Bob', 'AI Agent'],
     details: [
-      'Created custom mode for IBM Bob AI Agent',
-      'Streamlined common CSE workflows and documentation tasks',
-      'Integrated with team knowledge base and resources',
+      'Created custom mode/skill for IBM Bob',
+      'Helped CSE keep track of technology, client information, contract details, and more',
       'Improved team productivity through context-aware assistance',
     ],
     githubUrl: 'https://github.com/Henry-Xiao-HX/CSE-LLM-WIKI',
@@ -437,3 +398,4 @@ export const articles = [
 
 
 // Made with Bob
+

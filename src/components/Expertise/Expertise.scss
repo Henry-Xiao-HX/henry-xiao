@@ -87,6 +87,52 @@
       }
     }
   }
+  
+  &__skills {
+    margin-top: $spacing-06;
+    padding-top: $spacing-05;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-03;
+  }
+}
+
+.expertise-skill-tag {
+  @include transition-fast;
+  cursor: default;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Custom tag colors for expertise section
+.cds--tag--purple {
+  background-color: rgba(138, 63, 252, 0.1);
+  color: $portfolio-primary;
+  
+  &:hover {
+    background-color: rgba(138, 63, 252, 0.15);
+  }
+}
+
+.cds--tag--cyan {
+  background-color: rgba(17, 146, 232, 0.1);
+  color: $portfolio-accent-cyan;
+  
+  &:hover {
+    background-color: rgba(17, 146, 232, 0.15);
+  }
+}
+
+.cds--tag--magenta {
+  background-color: rgba(238, 83, 150, 0.1);
+  color: $portfolio-accent-magenta;
+  
+  &:hover {
+    background-color: rgba(238, 83, 150, 0.15);
+  }
 }
 
 // Override Carbon ClickableTile styles

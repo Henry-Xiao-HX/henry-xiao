@@ -68,7 +68,6 @@ const PortfolioHeader = () => {
               <HeaderMenuItem element={Link} to="/#writing" onClick={handleSectionClick('writing')}>Articles</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/#architecture" onClick={handleSectionClick('architecture')}>Architectures</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/#expertise" onClick={handleSectionClick('expertise')}>Expertise</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/#skills" onClick={handleSectionClick('skills')}>Skills</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="/#contact" onClick={handleSectionClick('contact')}>Contact</HeaderMenuItem>
             </HeaderNavigation>
             <HeaderGlobalBar>

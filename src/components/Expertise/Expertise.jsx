@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Column, ClickableTile } from '@carbon/react';
+import { Grid, Column, ClickableTile, Tag } from '@carbon/react';
 import { expertise } from '../../data/siteData';
 import './Expertise.scss';
 
@@ -25,6 +25,20 @@ const Expertise = () => {
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
+                {area.skills && area.skills.length > 0 && (
+                  <div className="expertise-tile__skills">
+                    {area.skills.map((skill, index) => (
+                      <Tag
+                        key={index}
+                        type={area.borderColor}
+                        size="sm"
+                        className="expertise-skill-tag"
+                      >
+                        {skill}
+                      </Tag>
+                    ))}
+                  </div>
+                )}
               </ClickableTile>
             ))}
           </div>
