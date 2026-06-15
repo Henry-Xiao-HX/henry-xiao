@@ -84,11 +84,21 @@ const Milestones = () => {
               <Layer className="milestone-details-card">
                 <Grid className="milestone-content-grid" narrow>
                   <Column lg={6} md={3} sm={4} className="milestone-image-col">
-                    <div className="milestone-image-placeholder">
-                      <p className="milestone-date">{selectedMilestone.date}</p>
-                      <p className="milestone-event">{selectedMilestone.event}</p>
-                      <p className="milestone-location">{selectedMilestone.location}</p>
-                    </div>
+                    {selectedMilestone.image ? (
+                      <div className="milestone-image-wrapper">
+                        <img
+                          src={selectedMilestone.image}
+                          alt={selectedMilestone.title}
+                          className="milestone-image"
+                        />
+                      </div>
+                    ) : (
+                      <div className="milestone-image-placeholder">
+                        <p className="milestone-date">{selectedMilestone.date}</p>
+                        <p className="milestone-event">{selectedMilestone.event}</p>
+                        <p className="milestone-location">{selectedMilestone.location}</p>
+                      </div>
+                    )}
                   </Column>
                   <Column lg={10} md={5} sm={4} className="milestone-details-col">
                     <div className="milestone-details-content">

@@ -191,7 +191,7 @@ export const milestones = {
         'Coordinated cross-team collaboration',
         'Knowledge sharing and best practices',
       ],
-      image: '/images/milestones/bob-hub-2026.jpg',
+      image: '/images/milestones/Default.png',
     },
     {
       id: 'worldwide-dii-office-hour-2026',
@@ -207,7 +207,7 @@ export const milestones = {
         'Shared data integration strategies',
         'Q&A with international teams',
       ],
-      image: '/images/milestones/worldwide-dii-2026.jpg',
+      image: '/images/milestones/Default.png',
     },
     {
       id: 'bay-area-ai-think-tank-2026',
@@ -223,7 +223,7 @@ export const milestones = {
         'Enterprise AI adoption strategies',
         'Networking with AI innovators',
       ],
-      image: '/images/milestones/bay-area-ai-2026.jpg',
+      image: '/images/milestones/BayAreaAIThinkTank.png',
     },
     {
       id: 'bob-party-fsm-2026',
@@ -239,7 +239,7 @@ export const milestones = {
         'FSM-specific use cases',
         'Interactive demonstrations',
       ],
-      image: '/images/milestones/bob-party-2026.jpg',
+      image: '/images/milestones/Default.png',
     },
     {
       id: 'fsm-dii-office-hour-2026',
@@ -255,7 +255,7 @@ export const milestones = {
         'Customer success best practices',
         'Technical deep-dive sessions',
       ],
-      image: '/images/milestones/fsm-dii-2026.jpg',
+      image: '/images/milestones/Default.png',
     },
     {
       id: 'fsm-tech-sales-brief-2026',
@@ -271,7 +271,7 @@ export const milestones = {
         'Customer engagement strategies',
         'Cross-functional collaboration',
       ],
-      image: '/images/milestones/tech-sales-2026.jpg',
+      image: '/images/milestones/Default.png',
     },
     {
       id: 'fsm-data-ai-sme-think-tank',
@@ -287,7 +287,7 @@ export const milestones = {
         'Customer engagement strategies',
         'Cross-functional collaboration',
       ],
-      image: '/images/milestones/tech-sales-2026.jpg',
+      image: '/images/milestones/Default.png',
     },
   ],
 };
