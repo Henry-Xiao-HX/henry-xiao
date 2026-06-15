@@ -15,6 +15,7 @@ import {
   HeaderSideNavItems,
 } from '@carbon/react';
 import { Document } from '@carbon/icons-react';
+import { personalInfo } from '../../data/siteData';
 import './Header.scss';
 
 // GitHub Icon Component
@@ -74,23 +75,16 @@ const PortfolioHeader = () => {
               <HeaderGlobalAction
                 aria-label="GitHub Profile"
                 tooltipAlignment="end"
-                onClick={() => window.open('https://github.com/yourusername', '_blank')}
+                onClick={() => window.open(`https://github.com/${personalInfo.github}`, '_blank')}
               >
                 <GitHubIcon />
               </HeaderGlobalAction>
               <HeaderGlobalAction
                 aria-label="LinkedIn Profile"
                 tooltipAlignment="end"
-                onClick={() => window.open('https://linkedin.com/in/yourusername', '_blank')}
+                onClick={() => window.open(`https://linkedin.com/in/${personalInfo.linkedin}`, '_blank')}
               >
                 <LinkedInIcon />
-              </HeaderGlobalAction>
-              <HeaderGlobalAction
-                aria-label="Download Resume"
-                tooltipAlignment="end"
-                onClick={() => window.open('/resume.pdf', '_blank')}
-              >
-                <Document size={20} />
               </HeaderGlobalAction>
             </HeaderGlobalBar>
             <SideNav
