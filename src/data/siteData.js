@@ -3,6 +3,8 @@
  * Update this file to change personal information, contact details, and content across the site
  */
 
+const imageBase = `${import.meta.env.BASE_URL}images`;
+
 export const personalInfo = {
   name: 'Henry Xiao',
   title: 'Agent Builder | Data and AI Customer Success Engineer @IBM FSM | Community Lead for IBM FSM CSE Agentic Center of Excellence',
@@ -158,7 +160,7 @@ export const milestones = {
         'Coordinated cross-team collaboration',
         '25+ demo assets. 10+ products. 40+ contributors',
       ],
-      image: '/images/milestones/Default.png',
+      image: `${imageBase}/milestones/Default.png`,
     },
     {
       id: 'worldwide-dii-office-hour-2026',
@@ -173,7 +175,7 @@ export const milestones = {
         'Global audience of CSE professionals',
         'Thought leadership in AI community',
       ],
-      image: '/images/milestones/Default.png',
+      image: `${imageBase}/milestones/Default.png`,
     },
     {
       id: 'bay-area-ai-think-tank-2026',
@@ -188,7 +190,7 @@ export const milestones = {
         'Thought leadership in AI community',
         'Enterprise AI adoption strategies',
       ],
-      image: '/images/milestones/BayAreaAIThinkTank.png',
+      image: `${imageBase}/milestones/BayAreaAIThinkTank.png`,
     },
     {
       id: 'bob-party-fsm-2026',
@@ -203,7 +205,7 @@ export const milestones = {
         'FSM-specific use cases',
         'IBM Bob Agentic Data Engineering',
       ],
-      image: '/images/milestones/Default.png',
+      image: `${imageBase}/milestones/Default.png`,
     },
     {
       id: 'fsm-dii-office-hour-2026',
@@ -219,7 +221,7 @@ export const milestones = {
         'Context Engineering for Agents',
         'Metadata Governance',
       ],
-      image: '/images/milestones/Default.png',
+      image: `${imageBase}/milestones/Default.png`,
     },
     {
       id: 'fsm-tech-sales-brief-2026',
@@ -235,7 +237,7 @@ export const milestones = {
         'Technical Sales Enablement',
         'Customer Engagement Strategies',
       ],
-      image: '/images/milestones/Default.png',
+      image: `${imageBase}/milestones/Default.png`,
     },
     {
       id: 'fsm-data-ai-sme-think-tank',
@@ -251,7 +253,7 @@ export const milestones = {
         'Customer engagement strategies',
         'Cross-functional collaboration',
       ],
-      image: '/images/milestones/Default.png',
+      image: `${imageBase}/milestones/Default.png`,
     },
   ],
 };
@@ -260,7 +262,7 @@ export const architectureDiagrams = [
     id: 'bob-datastage',
     title: 'Bob + DataStage: Automated ISX Export Analysis',
     description: 'Automated analysis of IBM DataStage ISX exports using Bob AI agent for intelligent job flow analysis, dependency mapping, and optimization recommendations.',
-    image: '/images/architecture/architectre_bob_datastage_ISX_analysis.png',
+    image: `${imageBase}/architecture/architectre_bob_datastage_ISX_analysis.png`,
     tags: ['Bob', 'DataStage', 'ISX', 'Automation', 'Analysis'],
     date: '2026',
   },
@@ -268,7 +270,7 @@ export const architectureDiagrams = [
     id: 'bob-context-engineering',
     title: 'Bob + Context Engineering: Metadata-Driven Model Accuracy',
     description: 'Leveraging metadata management to enhance AI model accuracy through intelligent context engineering, improving data lineage understanding and governance.',
-    image: '/images/architecture/architecture_bob_context_engineering.png',
+    image: `${imageBase}/architecture/architecture_bob_context_engineering.png`,
     tags: ['Bob', 'Context Engineering', 'Metadata', 'AI Accuracy', 'Governance'],
     date: '2026',
   },
@@ -276,7 +278,7 @@ export const architectureDiagrams = [
     id: 'bob-optim-tdm',
     title: 'Bob + Optim TDM: Production-Like Test Data',
     description: 'Enabling developers to test applications with production-like data using Bob AI agent integrated with IBM Optim Test Data Management for intelligent data provisioning.',
-    image: '/images/architecture/architecture_bob_optim_tdm.png',
+    image: `${imageBase}/architecture/architecture_bob_optim_tdm.png`,
     tags: ['Bob', 'Optim', 'TDM', 'Test Data', 'DevOps'],
     date: '2026',
   },
@@ -284,7 +286,7 @@ export const architectureDiagrams = [
     id: 'data-fabric-overview',
     title: 'Data Fabric Overview: Overarching Portfolio',
     description: 'Comprehensive data fabric architecture showcasing the complete portfolio of data integration, governance, and AI capabilities across the enterprise ecosystem.',
-    image: '/images/architecture/architecture_data_fabric_overview.png',
+    image: `${imageBase}/architecture/architecture_data_fabric_overview.png`,
     tags: ['Data Fabric', 'Portfolio', 'Integration', 'Enterprise', 'Architecture'],
     date: '2026',
   },
