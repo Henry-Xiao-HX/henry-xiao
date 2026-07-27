@@ -33,7 +33,7 @@ const Milestones = () => {
       <Grid>
         <Column lg={16} md={8} sm={4}>
           <div className="milestones-header">
-            <h2 className="milestones-title">{milestones.title}</h2>
+            <h2 className="section-title">{milestones.title}</h2>
             <p className="milestones-description">{milestones.description}</p>
           </div>
         </Column>

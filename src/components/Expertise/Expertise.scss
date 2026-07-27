@@ -37,26 +37,26 @@
   
   &--purple {
     border-left-color: $portfolio-primary;
-    
+
     &:hover {
       border-left-color: $portfolio-secondary;
-      box-shadow: 0 8px 24px rgba(138, 63, 252, 0.2);
+      box-shadow: 0 8px 24px rgba($portfolio-primary, 0.2);
     }
   }
-  
+
   &--cyan {
     border-left-color: $portfolio-accent-cyan;
-    
+
     &:hover {
-      box-shadow: 0 8px 24px rgba(17, 146, 232, 0.2);
+      box-shadow: 0 8px 24px rgba($portfolio-accent-cyan, 0.2);
     }
   }
-  
+
   &--magenta {
     border-left-color: $portfolio-accent-magenta;
-    
+
     &:hover {
-      box-shadow: 0 8px 24px rgba(238, 83, 150, 0.2);
+      box-shadow: 0 8px 24px rgba($portfolio-accent-magenta, 0.2);
     }
   }
   
@@ -100,29 +100,29 @@
 
 // Custom tag colors for expertise section
 .cds--tag--purple {
-  background-color: rgba(138, 63, 252, 0.1);
+  background-color: rgba($portfolio-primary, 0.1);
   color: $portfolio-primary;
-  
+
   &:hover {
-    background-color: rgba(138, 63, 252, 0.15);
+    background-color: rgba($portfolio-primary, 0.15);
   }
 }
 
 .cds--tag--cyan {
-  background-color: rgba(17, 146, 232, 0.1);
+  background-color: rgba($portfolio-accent-cyan, 0.1);
   color: $portfolio-accent-cyan;
-  
+
   &:hover {
-    background-color: rgba(17, 146, 232, 0.15);
+    background-color: rgba($portfolio-accent-cyan, 0.15);
   }
 }
 
 .cds--tag--magenta {
-  background-color: rgba(238, 83, 150, 0.1);
+  background-color: rgba($portfolio-accent-magenta, 0.1);
   color: $portfolio-accent-magenta;
-  
+
   &:hover {
-    background-color: rgba(238, 83, 150, 0.15);
+    background-color: rgba($portfolio-accent-magenta, 0.15);
   }
 }
 

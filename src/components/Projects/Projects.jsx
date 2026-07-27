@@ -5,7 +5,6 @@ import './Projects.scss';
 
 const ProjectCard = ({ project }) => (
   <ExpandableTile
-    key={project.id}
     id={project.id}
     className="project-tile"
     tileCollapsedIconText="Expand to see details"

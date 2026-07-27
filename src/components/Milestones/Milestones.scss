@@ -28,12 +28,10 @@ $node-colors: (
   margin-bottom: $spacing-06;
 }
 
-.milestones-title {
-  @include type-style('heading-05');
+// Heading itself reuses the shared .section-title (_common-sections.scss);
+// only the tighter gap before the description directly below differs here.
+.milestones-header .section-title {
   margin-bottom: $spacing-05;
-  color: $text-primary;
-  padding-bottom: $spacing-05;
-  border-bottom: 2px solid $portfolio-primary;
 }
 
 .milestones-description {

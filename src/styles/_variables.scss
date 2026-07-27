@@ -27,6 +27,6 @@ $portfolio-text-secondary: $text-secondary;
 $portfolio-text-inverse: $text-inverse;
 
 // Gradients
-$portfolio-gradient-subtle: linear-gradient(180deg, rgba(138, 63, 252, 0.1) 0%, rgba(17, 146, 232, 0.1) 100%);
+$portfolio-gradient-subtle: linear-gradient(180deg, rgba($portfolio-primary, 0.1) 0%, rgba($portfolio-accent-cyan, 0.1) 100%);
 
 // Made with Bob

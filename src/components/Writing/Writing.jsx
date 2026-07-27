@@ -6,7 +6,6 @@ import './Writing.scss';
 
 const ArticleCard = ({ article }) => (
   <ClickableTile
-    key={article.id}
     id={article.id}
     className="article-card"
     href={article.url}

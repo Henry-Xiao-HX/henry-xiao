@@ -93,7 +93,7 @@
   }
   
   .cds--side-nav__link--current {
-    background-color: rgba(138, 63, 252, 0.1);
+    background-color: rgba($portfolio-primary, 0.1);
     border-left: 3px solid $portfolio-primary;
     color: $portfolio-primary;
   }

@@ -2,8 +2,6 @@ import { useState } from 'react';
 import {
   Grid,
   Column,
-  Tile,
-  Tag,
   Button,
   ProgressIndicator,
   ProgressStep,
@@ -67,30 +65,10 @@ const ArchitecturePage = () => {
           <>
             <Column lg={16} md={8} sm={4}>
               <div className="architecture-carousel">
-                <Tile className="architecture-carousel__card">
-                  <div className="architecture-carousel__image-container">
-                    <img
-                      src={currentDiagram.image}
-                      alt={currentDiagram.title}
-                      className="architecture-carousel__image"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="architecture-carousel__content">
-                    <div className="architecture-carousel__header">
-                      <h2 className="architecture-carousel__title">{currentDiagram.title}</h2>
-                      <span className="architecture-carousel__date">{currentDiagram.date}</span>
-                    </div>
-                    <p className="architecture-carousel__description">{currentDiagram.description}</p>
-                    <div className="architecture-carousel__tags">
-                      {currentDiagram.tags.map((tag) => (
-                        <Tag key={tag} type="purple" size="sm">
-                          {tag}
-                        </Tag>
-                      ))}
-                    </div>
-                  </div>
-                </Tile>
+                <ArchitectureCard
+                  diagram={currentDiagram}
+                  className="architecture-carousel__card"
+                />
 
                 <div className="architecture-carousel__controls">
                   <Button
