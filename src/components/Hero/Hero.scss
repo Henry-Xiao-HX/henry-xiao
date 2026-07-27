@@ -139,7 +139,7 @@
     padding-left: $spacing-06;
     position: relative;
     color: $text-primary;
-    transition: all 0.2s ease;
+    @include transition-fast;
     
     &::before {
       content: '→';

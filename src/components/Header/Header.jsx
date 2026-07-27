@@ -30,19 +30,37 @@ const LinkedInIcon = () => (
   </svg>
 );
 
+/**
+ * Primary nav items — shared between the desktop HeaderNavigation and the
+ * mobile SideNav. Each entry may have an optional `to` override for the
+ * side nav (e.g. to surface the "All X" deep-link on mobile only).
+ *
+ * Shape: { label, to, sectionId? }
+ *   sectionId – if set, clicking from a non-home page navigates to /#sectionId
+ *   sideNavOnly – if true, the item appears only in the mobile SideNav
+ */
+const NAV_ITEMS = [
+  { label: 'About',          to: '/#about',          sectionId: 'about' },
+  { label: '2026 Highlights',to: '/#milestones',     sectionId: 'milestones' },
+  { label: 'Projects',       to: '/#projects',       sectionId: 'projects',
+    sideNavExtra: { label: 'All Projects',  to: '/projects' } },
+  { label: 'Articles',       to: '/#writing',        sectionId: 'writing',
+    sideNavExtra: { label: 'All Articles',  to: '/writing' } },
+  { label: 'Architectures',  to: '/architecture' },
+  { label: 'Expertise',      to: '/#expertise',      sectionId: 'expertise' },
+  { label: 'Contact',        to: '/#contact',        sectionId: 'contact' },
+];
+
 const PortfolioHeader = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const isHomePage = location.pathname === '/';
 
-  // Handle navigation to homepage sections from other pages
   const handleSectionClick = (sectionId) => (e) => {
-    if (!isHomePage) {
+    if (sectionId && !isHomePage) {
       e.preventDefault();
-      // Navigate to homepage with section hash
       navigate(`/#${sectionId}`);
     }
-    // If already on homepage, let the default anchor behavior work
   };
 
   return (
@@ -60,15 +78,21 @@ const PortfolioHeader = () => {
             <HeaderName element={Link} to="/" prefix="">
               {personalInfo.name}
             </HeaderName>
+
+            {/* Desktop nav */}
             <HeaderNavigation aria-label="Portfolio Navigation">
-              <HeaderMenuItem element={Link} to="/#about" onClick={handleSectionClick('about')}>About</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/#milestones" onClick={handleSectionClick('milestones')}>2026 Highlights</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/#projects" onClick={handleSectionClick('projects')}>Projects</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/#writing" onClick={handleSectionClick('writing')}>Articles</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/#architecture" onClick={handleSectionClick('architecture')}>Architectures</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/#expertise" onClick={handleSectionClick('expertise')}>Expertise</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="/#contact" onClick={handleSectionClick('contact')}>Contact</HeaderMenuItem>
+              {NAV_ITEMS.map(({ label, to, sectionId }) => (
+                <HeaderMenuItem
+                  key={to}
+                  element={Link}
+                  to={to}
+                  onClick={handleSectionClick(sectionId)}
+                >
+                  {label}
+                </HeaderMenuItem>
+              ))}
             </HeaderNavigation>
+
             <HeaderGlobalBar>
               <HeaderGlobalAction
                 aria-label="GitHub Profile"
@@ -85,6 +109,8 @@ const PortfolioHeader = () => {
                 <LinkedInIcon />
               </HeaderGlobalAction>
             </HeaderGlobalBar>
+
+            {/* Mobile side nav */}
             <SideNav
               aria-label="Side navigation"
               expanded={isSideNavExpanded}
@@ -93,15 +119,25 @@ const PortfolioHeader = () => {
             >
               <SideNavItems>
                 <HeaderSideNavItems>
-                  <HeaderMenuItem element={Link} to="/#about" onClick={handleSectionClick('about')}>About</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/#milestones" onClick={handleSectionClick('milestones')}>2026 Highlights</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/#projects" onClick={handleSectionClick('projects')}>Featured Projects</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/projects">All Projects</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/#writing" onClick={handleSectionClick('writing')}>Featured Articles</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/writing">All Articles</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/architecture">Architectures</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/#expertise" onClick={handleSectionClick('expertise')}>Expertise</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/#contact" onClick={handleSectionClick('contact')}>Contact</HeaderMenuItem>
+                  {NAV_ITEMS.flatMap(({ label, to, sectionId, sideNavExtra }) => {
+                    const primary = (
+                      <HeaderMenuItem
+                        key={to}
+                        element={Link}
+                        to={to}
+                        onClick={handleSectionClick(sectionId)}
+                      >
+                        {label}
+                      </HeaderMenuItem>
+                    );
+                    if (!sideNavExtra) return [primary];
+                    return [
+                      primary,
+                      <HeaderMenuItem key={sideNavExtra.to} element={Link} to={sideNavExtra.to}>
+                        {sideNavExtra.label}
+                      </HeaderMenuItem>,
+                    ];
+                  })}
                 </HeaderSideNavItems>
               </SideNavItems>
             </SideNav>
@@ -113,5 +149,3 @@ const PortfolioHeader = () => {
 };
 
 export default PortfolioHeader;
-
-// Made with Bob

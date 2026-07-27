@@ -1,9 +1,24 @@
 @use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 @use '@carbon/react';
 @use '@carbon/react/scss/spacing' as *;
 @use '@carbon/react/scss/theme' as *;
 @use '@carbon/react/scss/type' as *;
 @use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/colors' as colors;
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:color';
+
+// Timeline node colour palette — uses Carbon tokens, cycles via --node-color-index
+// base: main colour, hover: darker shade for hover state
+$node-colors: (
+  (base: colors.$blue-60,   hover: colors.$blue-80),
+  (base: colors.$green-50,  hover: colors.$green-70),
+  (base: colors.$purple-60, hover: colors.$purple-80),
+  (base: colors.$orange-40, hover: colors.$orange-60),
+  (base: colors.$red-50,    hover: colors.$red-70),
+);
 
 .milestones-section {
   background-color: $portfolio-bg-layer-1;
@@ -48,7 +63,7 @@
   left: 2%;
   right: 2%;
   height: 4px;
-  background: linear-gradient(90deg, #0F62FE 0%, #0F62FE 95%, transparent 95%);
+  background: linear-gradient(90deg, colors.$blue-60 0%, colors.$blue-60 95%, transparent 95%);
   transform: translateY(-50%);
   z-index: 1;
   
@@ -60,7 +75,7 @@
     transform: translateY(-50%);
     width: 0;
     height: 0;
-    border-left: 16px solid #0F62FE;
+    border-left: 16px solid colors.$blue-60;
     border-top: 12px solid transparent;
     border-bottom: 12px solid transparent;
   }
@@ -83,43 +98,20 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  transition: all 0.3s ease;
+  @include transition-moderate;
   
-  // Color definitions using CSS custom properties
-  // These cycle through 5 colors based on --node-color-index
-  &[style*="--node-color-index: 0"] {
-    .node-circle { background: #0F62FE; border-color: #0F62FE; }
-    .node-connector { background: #0F62FE; }
-    &:hover .node-circle { background: #0043CE; border-color: #0043CE; }
-    &.active .node-circle { box-shadow: 0 0 0 4px rgba(15, 98, 254, 0.3); }
-  }
-  
-  &[style*="--node-color-index: 1"] {
-    .node-circle { background: #24A148; border-color: #24A148; }
-    .node-connector { background: #24A148; }
-    &:hover .node-circle { background: #198038; border-color: #198038; }
-    &.active .node-circle { box-shadow: 0 0 0 4px rgba(36, 161, 72, 0.3); }
-  }
-  
-  &[style*="--node-color-index: 2"] {
-    .node-circle { background: #8A3FFC; border-color: #8A3FFC; }
-    .node-connector { background: #8A3FFC; }
-    &:hover .node-circle { background: #6929C4; border-color: #6929C4; }
-    &.active .node-circle { box-shadow: 0 0 0 4px rgba(138, 63, 252, 0.3); }
-  }
-  
-  &[style*="--node-color-index: 3"] {
-    .node-circle { background: #FF832B; border-color: #FF832B; }
-    .node-connector { background: #FF832B; }
-    &:hover .node-circle { background: #EB6200; border-color: #EB6200; }
-    &.active .node-circle { box-shadow: 0 0 0 4px rgba(255, 131, 43, 0.3); }
-  }
-  
-  &[style*="--node-color-index: 4"] {
-    .node-circle { background: #FA4D56; border-color: #FA4D56; }
-    .node-connector { background: #FA4D56; }
-    &:hover .node-circle { background: #DA1E28; border-color: #DA1E28; }
-    &.active .node-circle { box-shadow: 0 0 0 4px rgba(250, 77, 86, 0.3); }
+  // Colour variants — generated from $node-colors palette via @each
+  @each $entry in $node-colors {
+    $i: list.index($node-colors, $entry) - 1;
+    $base:        map.get($entry, base);
+    $hover-color: map.get($entry, hover);
+
+    &[style*="--node-color-index: #{$i}"] {
+      .node-circle    { background: $base;        border-color: $base; }
+      .node-connector { background: $base; }
+      &:hover .node-circle { background: $hover-color; border-color: $hover-color; }
+      &.active .node-circle { box-shadow: 0 0 0 4px color.adjust($base, $alpha: -0.7); }
+    }
   }
   
   // Above axis: text → stem → circle → axis (flowing upward)
@@ -210,7 +202,7 @@
 .node-title {
   @include type-style('body-compact-01');
   color: $text-secondary;
-  transition: all 0.2s ease;
+  @include transition-fast;
   font-weight: 500;
 }
 
@@ -224,7 +216,7 @@
 .node-connector {
   position: relative;
   width: 3px;
-  transition: all 0.3s ease;
+  @include transition-moderate;
   z-index: 2;
 }
 
@@ -237,7 +229,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  @include transition-moderate;
   z-index: 3;
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);

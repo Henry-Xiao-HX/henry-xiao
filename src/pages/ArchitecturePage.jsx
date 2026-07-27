@@ -4,16 +4,14 @@ import {
   Column,
   Tile,
   Tag,
-  Breadcrumb,
-  BreadcrumbItem,
   Button,
   ProgressIndicator,
   ProgressStep,
 } from '@carbon/react';
 import { ArrowLeft, ArrowRight } from '@carbon/icons-react';
-import { Link } from 'react-router-dom';
 import { architectureDiagrams } from '../data/siteData';
 import ArchitectureCard from '../components/Architecture/ArchitectureCard';
+import PageLayout from '../components/PageLayout/PageLayout';
 import './ArchitecturePage.scss';
 
 const ArchitecturePage = () => {
@@ -38,46 +36,33 @@ const ArchitecturePage = () => {
 
   const currentDiagram = architectureDiagrams[currentIndex];
 
+  const viewToggle = (
+    <>
+      <Button
+        kind={viewMode === 'carousel' ? 'primary' : 'tertiary'}
+        size="sm"
+        onClick={() => setViewMode('carousel')}
+      >
+        Carousel View
+      </Button>
+      <Button
+        kind={viewMode === 'grid' ? 'primary' : 'tertiary'}
+        size="sm"
+        onClick={() => setViewMode('grid')}
+      >
+        Grid View
+      </Button>
+    </>
+  );
+
   return (
-    <div className="architecture-page">
+    <PageLayout
+      crumb="Architecture"
+      title="Architecture Diagrams"
+      subtitle="Visual representations of data integration, AI agent architectures, and enterprise solutions. Explore how Bob AI agents integrate with IBM data management tools to deliver intelligent automation."
+      headerExtra={viewToggle}
+    >
       <Grid>
-        <Column lg={16} md={8} sm={4}>
-          <Breadcrumb noTrailingSlash className="architecture-page__breadcrumb">
-            <BreadcrumbItem>
-              <Link to="/">Home</Link>
-            </BreadcrumbItem>
-            <BreadcrumbItem isCurrentPage>Architecture</BreadcrumbItem>
-          </Breadcrumb>
-        </Column>
-
-        <Column lg={16} md={8} sm={4}>
-          <div className="architecture-page__header">
-            <div className="architecture-page__header-content">
-              <h1 className="architecture-page__title">Architecture Diagrams</h1>
-              <p className="architecture-page__subtitle">
-                Visual representations of data integration, AI agent architectures, and enterprise solutions.
-                Explore how Bob AI agents integrate with IBM data management tools to deliver intelligent automation.
-              </p>
-            </div>
-            <div className="architecture-page__view-toggle">
-              <Button
-                kind={viewMode === 'carousel' ? 'primary' : 'tertiary'}
-                size="sm"
-                onClick={() => setViewMode('carousel')}
-              >
-                Carousel View
-              </Button>
-              <Button
-                kind={viewMode === 'grid' ? 'primary' : 'tertiary'}
-                size="sm"
-                onClick={() => setViewMode('grid')}
-              >
-                Grid View
-              </Button>
-            </div>
-          </div>
-        </Column>
-
         {viewMode === 'carousel' ? (
           <>
             <Column lg={16} md={8} sm={4}>
@@ -117,13 +102,11 @@ const ArchitecturePage = () => {
                     onClick={handlePrevious}
                     className="architecture-carousel__nav-button"
                   />
-                  
                   <div className="architecture-carousel__indicator">
                     <span className="architecture-carousel__counter">
                       {currentIndex + 1} / {architectureDiagrams.length}
                     </span>
                   </div>
-
                   <Button
                     kind="ghost"
                     size="lg"
@@ -164,10 +147,8 @@ const ArchitecturePage = () => {
           </Column>
         )}
       </Grid>
-    </div>
+    </PageLayout>
   );
 };
 
 export default ArchitecturePage;
-
-// Made with Bob

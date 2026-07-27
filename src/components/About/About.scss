@@ -1,19 +1,12 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
+@use '../../styles/common-sections' as *;
 @use '@carbon/react/scss/spacing' as *;
 @use '@carbon/react/scss/breakpoint' as *;
 @use '@carbon/react/scss/type' as *;
 
 .about-section {
   background-color: $portfolio-bg-main;
-}
-
-.section-title {
-  @include type-style('heading-05');
-  color: $portfolio-text-primary;
-  margin-bottom: $spacing-09;
-  padding-bottom: $spacing-05;
-  border-bottom: 2px solid $portfolio-primary;
 }
 
 .about-image-col {

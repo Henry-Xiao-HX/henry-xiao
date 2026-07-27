@@ -1,11 +1,11 @@
-@use '../styles/variables' as *;
-@use '../styles/mixins' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 @use '@carbon/react/scss/spacing' as *;
 @use '@carbon/react/scss/theme' as *;
 @use '@carbon/react/scss/breakpoint' as *;
 @use '@carbon/react/scss/type' as *;
 
-.writing-page {
+.page-layout {
   min-height: 100vh;
   padding: $spacing-09 0;
 
@@ -38,16 +38,31 @@
     max-width: 42rem;
   }
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: $spacing-06;
+  // Used when headerExtra is present (e.g. view-toggle on Architecture page)
+  &__header--with-extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $spacing-05;
+    flex-wrap: wrap;
 
     @include breakpoint-down(md) {
-      grid-template-columns: 1fr;
-      gap: $spacing-05;
+      flex-direction: column;
+    }
+  }
+
+  &__header-content {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  &__header-extra {
+    display: flex;
+    gap: $spacing-03;
+    align-items: center;
+
+    @include breakpoint-down(md) {
+      width: 100%;
     }
   }
 }
-
-// Made with Bob

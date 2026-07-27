@@ -5,68 +5,14 @@
 @use '@carbon/react/scss/breakpoint' as *;
 @use '@carbon/react/scss/type' as *;
 
-.architecture-page {
-  min-height: 100vh;
-  padding: $spacing-09 0;
+// Grid view layout (architecture-page__grid used on full page)
+.architecture-page__grid {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-07;
 
   @include breakpoint-down(md) {
-    padding: $spacing-07 0;
-  }
-
-  &__breadcrumb {
-    margin-bottom: $spacing-07;
-  }
-
-  &__header {
-    margin-bottom: $spacing-09;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: $spacing-05;
-    flex-wrap: wrap;
-
-    @include breakpoint-down(md) {
-      margin-bottom: $spacing-07;
-      flex-direction: column;
-    }
-  }
-
-  &__header-content {
-    flex: 1;
-    min-width: 300px;
-  }
-
-  &__view-toggle {
-    display: flex;
-    gap: $spacing-03;
-    align-items: center;
-
-    @include breakpoint-down(md) {
-      width: 100%;
-    }
-  }
-
-  &__title {
-    @include type-style('heading-05');
-    font-weight: 600;
-    margin-bottom: $spacing-05;
-    color: $text-primary;
-  }
-
-  &__subtitle {
-    @include type-style('body-long-02');
-    color: $text-secondary;
-    max-width: 42rem;
-  }
-
-  &__grid {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-07;
-
-    @include breakpoint-down(md) {
-      gap: $spacing-06;
-    }
+    gap: $spacing-06;
   }
 }
 
@@ -74,7 +20,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: all 0.2s ease;
+  @include transition-fast;
 
   @include breakpoint(lg) {
     flex-direction: row;
@@ -183,7 +129,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    transition: all 0.3s ease;
+    @include transition-moderate;
     animation: fadeIn 0.4s ease-in-out;
 
     @include breakpoint(lg) {
@@ -287,7 +233,7 @@
   }
 
   &__nav-button {
-    transition: all 0.2s ease;
+    @include transition-fast;
 
     &:hover {
       transform: scale(1.1);
@@ -317,7 +263,7 @@
 
     .cds--progress-step {
       cursor: pointer;
-      transition: all 0.2s ease;
+      @include transition-fast;
 
       &:hover {
         .cds--progress-label {

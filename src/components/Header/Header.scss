@@ -13,7 +13,7 @@
     font-weight: 700;
     font-size: 1.25rem;
     letter-spacing: -0.02em;
-    transition: all 0.2s ease;
+    @include transition-fast;
     
     &:hover {
       color: $portfolio-primary;
@@ -23,7 +23,7 @@
   .cds--header__menu-item {
     color: $portfolio-text-primary;
     font-weight: 500;
-    transition: all 0.2s ease;
+    @include transition-fast;
     
     &:hover {
       background-color: $portfolio-bg-layer-1;
@@ -49,7 +49,7 @@
   .cds--header__global {
     .cds--header__action {
       color: $portfolio-text-primary;
-      transition: all 0.2s ease;
+      @include transition-fast;
       
       svg {
         fill: $portfolio-text-primary;
@@ -79,7 +79,7 @@
   .cds--side-nav__link {
     color: $portfolio-text-primary;
     font-weight: 500;
-    transition: all 0.2s ease;
+    @include transition-fast;
     
     &:hover {
       background-color: $portfolio-bg-layer-1;

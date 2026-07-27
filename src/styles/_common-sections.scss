@@ -4,6 +4,15 @@
 @use '@carbon/react/scss/type' as *;
 @use './variables' as *;
 
+// Shared section heading used by About, Expertise, Contact, Milestones, etc.
+.section-title {
+  @include type-style('heading-05');
+  color: $portfolio-text-primary;
+  margin-bottom: $spacing-09;
+  padding-bottom: $spacing-05;
+  border-bottom: 2px solid $portfolio-primary;
+}
+
 .section-header {
   display: flex;
   justify-content: space-between;
