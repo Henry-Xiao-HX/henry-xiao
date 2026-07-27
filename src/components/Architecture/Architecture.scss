@@ -19,7 +19,7 @@
 // Base card — shared by the homepage grid preview AND the full architecture page.
 // ArchitecturePage.scss only adds layout-specific overrides on top of these rules.
 .architecture-card {
-  @include transition-moderate;
+  @include hover-lift;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -27,8 +27,6 @@
   border-left: 4px solid $portfolio-primary;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     border-left-color: $portfolio-accent-cyan;
   }
 
