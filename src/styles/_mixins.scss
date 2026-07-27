@@ -27,14 +27,6 @@
   }
 }
 
-// Gradient text effect
-@mixin gradient-text($gradient) {
-  background: $gradient;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 // Bullet list item — custom •  marker using ::before
 // Usage: @include bullet-list-item;
 //        @include bullet-list-item($portfolio-accent-cyan);
