@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import PortfolioHeader from './components/Header/Header';
 import HomePage from './pages/HomePage';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Grid, Column, ClickableTile, Breadcrumb, BreadcrumbItem, Tag } from '@carbon/react';
 import { ArrowRight } from '@carbon/icons-react';
 import { Link } from 'react-router-dom';

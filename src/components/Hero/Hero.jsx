@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, Grid, Column } from '@carbon/react';
 import { ArrowRight } from '@carbon/icons-react';
 import { hero } from '../../data/siteData';

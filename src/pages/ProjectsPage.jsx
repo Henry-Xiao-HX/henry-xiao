@@ -1,4 +1,3 @@
-import React from 'react';
 import { Grid, Column, ExpandableTile, TileAboveTheFoldContent, TileBelowTheFoldContent, Tag, Button, Breadcrumb, BreadcrumbItem } from '@carbon/react';
 import { Link } from 'react-router-dom';
 import { projects, projectStatusConfig } from '../data/siteData';

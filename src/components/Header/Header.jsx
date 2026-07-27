@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import {
   Header,
@@ -14,7 +13,6 @@ import {
   SideNavItems,
   HeaderSideNavItems,
 } from '@carbon/react';
-import { Document } from '@carbon/icons-react';
 import { personalInfo } from '../../data/siteData';
 import './Header.scss';
 
@@ -103,7 +101,6 @@ const PortfolioHeader = () => {
                   <HeaderMenuItem element={Link} to="/writing">All Articles</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/architecture">Architectures</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/#expertise" onClick={handleSectionClick('expertise')}>Expertise</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="/#skills" onClick={handleSectionClick('skills')}>Skills</HeaderMenuItem>
                   <HeaderMenuItem element={Link} to="/#contact" onClick={handleSectionClick('contact')}>Contact</HeaderMenuItem>
                 </HeaderSideNavItems>
               </SideNavItems>

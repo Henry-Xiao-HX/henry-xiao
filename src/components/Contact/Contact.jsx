@@ -1,4 +1,3 @@
-import React from 'react';
 import { Grid, Column } from '@carbon/react';
 import { Email, LogoLinkedin, LogoGithub, Edit } from '@carbon/icons-react';
 import { contact } from '../../data/siteData';

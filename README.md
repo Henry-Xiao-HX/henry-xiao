@@ -22,11 +22,11 @@ A modern, responsive portfolio website built with React, Vite, and IBM Carbon De
 
 ## 🛠️ Tech Stack
 
-- **Framework**: React 18.2.0
-- **Build Tool**: Vite 5.0.0
-- **Design System**: @carbon/react 1.40.0
+- **Framework**: React 19.2.6
+- **Build Tool**: Vite 8.0.12
+- **Design System**: @carbon/react 1.108.0
 - **Styling**: SCSS with Carbon tokens
-- **Icons**: @carbon/icons-react 11.30.0
+- **Icons**: @carbon/icons-react 11.81.0
 
 ## 📦 Installation
 
@@ -58,14 +58,8 @@ $portfolio-accent-magenta: #ee5396; // Magenta
 
 ### Content
 
-Update content in the respective component files:
-- `src/components/Hero/Hero.jsx` - Hero section content
-- `src/components/About/About.jsx` - About section content
-- `src/components/Expertise/Expertise.jsx` - Expertise areas
-- `src/components/Projects/Projects.jsx` - Project details
-- `src/components/Writing/Writing.jsx` - Articles
-- `src/components/Skills/Skills.jsx` - Skills list
-- `src/components/Contact/Contact.jsx` - Contact information
+All site content is centralized in a single file:
+- `src/data/siteData.js` - **Single source of truth** for all personal info, projects, articles, skills, milestones, and architecture diagrams
 
 ### Images
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Grid, Column } from '@carbon/react';
 import { about } from '../../data/siteData';
 import './About.scss';

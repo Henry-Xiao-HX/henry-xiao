@@ -1,4 +1,3 @@
-import React from 'react';
 import { Grid, Column, ClickableTile, Tag } from '@carbon/react';
 import { expertise } from '../../data/siteData';
 import './Expertise.scss';

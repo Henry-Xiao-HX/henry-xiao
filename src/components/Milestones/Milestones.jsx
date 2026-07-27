@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Grid, Column, Layer } from '@carbon/react';
 import { CheckmarkFilled } from '@carbon/icons-react';
 import { milestones } from '../../data/siteData';
