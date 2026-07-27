@@ -8,11 +8,12 @@ import {
   BreadcrumbItem,
   Button,
   ProgressIndicator,
-  ProgressStep
+  ProgressStep,
 } from '@carbon/react';
 import { ArrowLeft, ArrowRight } from '@carbon/icons-react';
 import { Link } from 'react-router-dom';
 import { architectureDiagrams } from '../data/siteData';
+import ArchitectureCard from '../components/Architecture/ArchitectureCard';
 import './ArchitecturePage.scss';
 
 const ArchitecturePage = () => {
@@ -97,8 +98,8 @@ const ArchitecturePage = () => {
                     </div>
                     <p className="architecture-carousel__description">{currentDiagram.description}</p>
                     <div className="architecture-carousel__tags">
-                      {currentDiagram.tags.map((tag, index) => (
-                        <Tag key={index} type="purple" size="sm">
+                      {currentDiagram.tags.map((tag) => (
+                        <Tag key={tag} type="purple" size="sm">
                           {tag}
                         </Tag>
                       ))}
@@ -157,30 +158,7 @@ const ArchitecturePage = () => {
           <Column lg={16} md={8} sm={4}>
             <div className="architecture-page__grid">
               {architectureDiagrams.map((diagram) => (
-                <Tile key={diagram.id} className="architecture-card">
-                  <div className="architecture-card__image-container">
-                    <img
-                      src={diagram.image}
-                      alt={diagram.title}
-                      className="architecture-card__image"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="architecture-card__content">
-                    <div className="architecture-card__header">
-                      <h2 className="architecture-card__title">{diagram.title}</h2>
-                      <span className="architecture-card__date">{diagram.date}</span>
-                    </div>
-                    <p className="architecture-card__description">{diagram.description}</p>
-                    <div className="architecture-card__tags">
-                      {diagram.tags.map((tag, index) => (
-                        <Tag key={index} type="purple" size="sm">
-                          {tag}
-                        </Tag>
-                      ))}
-                    </div>
-                  </div>
-                </Tile>
+                <ArchitectureCard key={diagram.id} diagram={diagram} />
               ))}
             </div>
           </Column>

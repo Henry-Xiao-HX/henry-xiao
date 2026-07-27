@@ -15,12 +15,18 @@ export const personalInfo = {
 };
 
 export const hero = {
+  eyebrow: 'Data & AI',
   title: personalInfo.name,
   subtitle: personalInfo.title,
   specialties: [
     'Agentic AI for Enterprise Data Engineering',
     'Technical Enablement and Thought Leadership across IBM Teams',
     'Community Lead for IBM FSM CSE Agentic Center of Excellence',
+  ],
+  stats: [
+    { value: '1', label: 'Community' },
+    { value: '3+', label: 'Years Experience' },
+    { value: '20+', label: 'Projects Delivered' },
   ],
   cta: {
     primary: { text: 'View Projects', target: 'projects' },
@@ -30,9 +36,11 @@ export const hero = {
 };
 
 export const about = {
-  intro: `I'm a Data & AI Customer Success Engineer at IBM, focusing on helping organizations adopt and accelerate Data & AI solutions: from modernizing data architectures to implementing Agentic AI capabilities that drive operational efficiency, strengthen risk management, and support regulatory compliance.
-
-`,
+  image: {
+    src: `${imageBase}/about/ibm-bee.jpg`,
+    alt: 'Henry Xiao speaking at TechXchange',
+  },
+  intro: `I'm a Data & AI Customer Success Engineer at IBM, focusing on helping organizations adopt and accelerate Data & AI solutions: from modernizing data architectures to implementing Agentic AI capabilities that drive operational efficiency, strengthen risk management, and support regulatory compliance.`,
   approach: `My approach: modular, open architecture that bridges agentic innovation with engineering rigor.`,
   focusAreas: [
     {

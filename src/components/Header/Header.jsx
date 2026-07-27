@@ -49,7 +49,7 @@ const PortfolioHeader = () => {
     <HeaderContainer
       render={({ isSideNavExpanded, onClickSideNavExpand }) => (
         <>
-          <Header aria-label="Henry Xiao Portfolio">
+          <Header aria-label={`${personalInfo.name} Portfolio`}>
             <SkipToContent />
             <HeaderMenuButton
               aria-label={isSideNavExpanded ? 'Close menu' : 'Open menu'}
@@ -58,7 +58,7 @@ const PortfolioHeader = () => {
               aria-expanded={isSideNavExpanded}
             />
             <HeaderName element={Link} to="/" prefix="">
-              Henry Xiao
+              {personalInfo.name}
             </HeaderName>
             <HeaderNavigation aria-label="Portfolio Navigation">
               <HeaderMenuItem element={Link} to="/#about" onClick={handleSectionClick('about')}>About</HeaderMenuItem>

@@ -12,8 +12,8 @@ const About = () => {
         <Column lg={4} md={2} sm={4} className="about-image-col">
           <div className="about-image-placeholder">
             <img
-              src={`${import.meta.env.BASE_URL}images/about/ibm-bee.jpg`}
-              alt="Henry Xiao speaking at TechXchange"
+              src={about.image.src}
+              alt={about.image.alt}
               className="about-image"
             />
           </div>
