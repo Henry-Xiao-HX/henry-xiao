@@ -29,8 +29,8 @@ const About = () => {
             <div className="about-focus">
               <h3 className="focus-title">Key Focus Areas:</h3>
               <ul className="focus-list">
-                {about.focusAreas.map((area, index) => (
-                  <li key={index}>
+                {about.focusAreas.map((area) => (
+                  <li key={area.title}>
                     <strong>{area.title}</strong>
                     <span>{area.description}</span>
                   </li>

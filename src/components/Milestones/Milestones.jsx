@@ -107,8 +107,8 @@ const Milestones = () => {
                       <div className="milestone-highlights">
                         <h4 className="milestone-highlights-title">Key Highlights</h4>
                         <ul className="milestone-highlights-list">
-                          {selectedMilestone.highlights.map((highlight, index) => (
-                            <li key={index}>{highlight}</li>
+                          {selectedMilestone.highlights.map((highlight) => (
+                            <li key={highlight}>{highlight}</li>
                           ))}
                         </ul>
                       </div>

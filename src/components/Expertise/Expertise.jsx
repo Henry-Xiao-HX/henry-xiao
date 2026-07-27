@@ -20,15 +20,15 @@ const Expertise = () => {
               >
                 <h3 className="expertise-tile__title">{area.title}</h3>
                 <ul className="expertise-tile__list">
-                  {area.items.map((item, index) => (
-                    <li key={index}>{item}</li>
+                  {area.items.map((item) => (
+                    <li key={item}>{item}</li>
                   ))}
                 </ul>
                 {area.skills && area.skills.length > 0 && (
                   <div className="expertise-tile__skills">
-                    {area.skills.map((skill, index) => (
+                    {area.skills.map((skill) => (
                       <Tag
-                        key={index}
+                        key={skill}
                         type={area.borderColor}
                         size="sm"
                         className="expertise-skill-tag"

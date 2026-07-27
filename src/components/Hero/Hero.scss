@@ -104,8 +104,8 @@
   border-left: 4px solid $portfolio-primary;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  
+  @include transition-moderate;
+
   &:hover {
     background: $background;
     border-left-color: $blue-70;
@@ -165,9 +165,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: $spacing-05;
-  
+
   .cds--btn {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition-moderate;
     font-weight: 500;
     
     &.cds--btn--primary {
@@ -228,7 +228,7 @@
   border: 1px solid $border-subtle-01;
   border-left: 4px solid $portfolio-primary;
   border-radius: 4px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition-moderate;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   
   &:hover {

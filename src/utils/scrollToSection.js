@@ -2,14 +2,10 @@
 export const scrollToSection = (sectionId) => {
   // Remove the # if present
   const id = sectionId.replace('#', '');
-  
-  // Wait for the DOM to be ready
-  setTimeout(() => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }, 100);
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 };
 
 // Made with Bob

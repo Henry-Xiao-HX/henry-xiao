@@ -1,6 +1,8 @@
 // Reusable SCSS Mixins
 @use '@carbon/motion' as *;
+@use '@carbon/react/scss/spacing' as *;
 @use '@carbon/react/scss/theme' as *;
+@use './variables' as *;
 
 // Transition mixins using Carbon motion tokens
 @mixin transition-fast {
@@ -31,6 +33,23 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+// Bullet list item — custom •  marker using ::before
+// Usage: @include bullet-list-item;
+//        @include bullet-list-item($portfolio-accent-cyan);
+@mixin bullet-list-item($color: $portfolio-primary) {
+  padding: $spacing-03 0;
+  padding-left: $spacing-05;
+  position: relative;
+
+  &::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: $color;
+    font-weight: bold;
+  }
 }
 
 // Made with Bob

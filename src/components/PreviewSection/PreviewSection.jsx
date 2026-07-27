@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, Column, Button } from '@carbon/react';
 import { ArrowRight } from '@carbon/icons-react';
@@ -67,7 +68,11 @@ const PreviewSection = ({
         </Column>
         <Column lg={16} md={8} sm={4}>
           <div className={gridClassName}>
-            {displayItems.map(renderItem)}
+            {displayItems.map((item) => (
+              <Fragment key={item.id}>
+                {renderItem(item)}
+              </Fragment>
+            ))}
           </div>
           {preview && (
             <div className="view-all-container">

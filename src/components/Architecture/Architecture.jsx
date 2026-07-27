@@ -15,7 +15,7 @@ const Architecture = ({ preview = false, limit = 3 }) => (
     preview={preview}
     limit={limit}
     gridClassName="architecture-grid"
-    renderItem={(diagram) => <ArchitectureCard key={diagram.id} diagram={diagram} />}
+    renderItem={(diagram) => <ArchitectureCard diagram={diagram} />}
   />
 );
 

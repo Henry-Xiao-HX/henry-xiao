@@ -30,20 +30,20 @@ const ProjectCard = ({ project }) => (
       </div>
       <p className="project-tile__description">{project.description}</p>
       <div className="project-tile__tech-stack">
-        {project.techStack.map((tech, index) => (
-          <Tag key={index} type="purple" size="sm">
-            {tech}
-          </Tag>
-        ))}
+        {project.techStack.map((tech) => (
+            <Tag key={tech} type="purple" size="sm">
+              {tech}
+            </Tag>
+          ))}
       </div>
     </TileAboveTheFoldContent>
     <TileBelowTheFoldContent>
       <div className="project-tile__details">
         <h4 className="project-tile__details-title">Key Features:</h4>
         <ul className="project-tile__details-list">
-          {project.details.map((detail, index) => (
-            <li key={index}>{detail}</li>
-          ))}
+          {project.details.map((detail) => (
+              <li key={detail}>{detail}</li>
+            ))}
         </ul>
         <div className="project-tile__actions">
           <Button kind="primary" size="sm" href={project.githubUrl}>
@@ -70,7 +70,7 @@ const Projects = ({ preview = false, limit = 3 }) => (
     preview={preview}
     limit={limit}
     gridClassName="projects-grid"
-    renderItem={(project) => <ProjectCard key={project.id} project={project} />}
+    renderItem={(project) => <ProjectCard project={project} />}
   />
 );
 

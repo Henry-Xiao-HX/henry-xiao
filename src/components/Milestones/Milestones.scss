@@ -370,18 +370,9 @@ $node-colors: (
 
   li {
     @include type-style('body-compact-01');
+    @include bullet-list-item($link-primary);
     color: $text-secondary;
-    padding-left: $spacing-05;
     margin-bottom: $spacing-03;
-    position: relative;
-
-    &::before {
-      content: '•';
-      position: absolute;
-      left: 0;
-      color: $link-primary;
-      font-weight: 600;
-    }
 
     &:last-child {
       margin-bottom: 0;

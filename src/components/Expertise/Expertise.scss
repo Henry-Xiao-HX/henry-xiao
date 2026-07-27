@@ -74,18 +74,8 @@
     
     li {
       @include type-style('body-01');
+      @include bullet-list-item;
       color: $portfolio-text-secondary;
-      padding: $spacing-03 0;
-      padding-left: $spacing-05;
-      position: relative;
-      
-      &::before {
-        content: '•';
-        position: absolute;
-        left: 0;
-        color: $portfolio-primary;
-        font-weight: bold;
-      }
     }
   }
   

@@ -13,18 +13,15 @@ function ScrollToHashElement() {
   const location = useLocation();
 
   useEffect(() => {
-    // HashRouter uses location.pathname for the route
-    // Check if the pathname contains a section hash (e.g., "/#expertise")
+    // HashRouter uses location.pathname for the route.
+    // A section anchor is encoded as "/#sectionId", so it appears as
+    // the second segment after splitting on '#'.
     const pathParts = location.pathname.split('#');
-    
+
     if (pathParts.length > 1 && pathParts[1]) {
-      // We have a section hash in the pathname
       scrollToSection(pathParts[1]);
-    } else if (location.hash) {
-      // Fallback to location.hash if present
-      scrollToSection(location.hash);
     } else {
-      // Scroll to top when navigating to a new page without hash
+      // Scroll to top when navigating to a new page without a section anchor
       window.scrollTo(0, 0);
     }
   }, [location]);

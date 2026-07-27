@@ -39,7 +39,7 @@ const Writing = ({ preview = false, limit = 3 }) => (
     preview={preview}
     limit={limit}
     gridClassName="writing-grid"
-    renderItem={(article) => <ArticleCard key={article.id} article={article} />}
+    renderItem={(article) => <ArticleCard article={article} />}
   />
 );
 

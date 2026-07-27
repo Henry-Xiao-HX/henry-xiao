@@ -16,9 +16,9 @@ const Hero = () => {
             <div className="hero-specialties">
               <h2 className="hero-specialty-label">Core expertise</h2>
               <ul className="hero-specialty-list">
-                {hero.specialties.map((specialty, index) => (
-                  <li key={index}>{specialty}</li>
-                ))}
+                {hero.specialties.map((specialty) => (
+                    <li key={specialty}>{specialty}</li>
+                  ))}
               </ul>
             </div>
             <div className="hero-cta">
