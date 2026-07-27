@@ -1,4 +1,4 @@
-import { Grid, Column, ExpandableTile, TileAboveTheFoldContent, TileBelowTheFoldContent, Tag, Button } from '@carbon/react';
+import { ExpandableTile, TileAboveTheFoldContent, TileBelowTheFoldContent, Tag, Button } from '@carbon/react';
 import { projects, projectStatusConfig } from '../../data/siteData';
 import PreviewSection from '../PreviewSection/PreviewSection';
 import './Projects.scss';
