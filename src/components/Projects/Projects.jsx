@@ -45,12 +45,16 @@ const ProjectCard = ({ project }) => (
             ))}
         </ul>
         <div className="project-tile__actions">
-          <Button kind="primary" size="sm" href={project.githubUrl}>
-            View on GitHub
-          </Button>
-          <Button kind="secondary" size="sm" href={project.demoUrl}>
-            Live Demo
-          </Button>
+          {project.githubUrl && project.githubUrl !== '#' && (
+            <Button kind="primary" size="sm" href={project.githubUrl}>
+              View on GitHub
+            </Button>
+          )}
+          {project.demoUrl && project.demoUrl !== '#' && (
+            <Button kind="secondary" size="sm" href={project.demoUrl}>
+              Live Demo
+            </Button>
+          )}
         </div>
       </div>
     </TileBelowTheFoldContent>

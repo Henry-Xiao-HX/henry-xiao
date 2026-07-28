@@ -45,13 +45,12 @@
   padding: $spacing-05;
   background-color: $portfolio-bg-main;
   border-radius: 4px;
-  border-left: 4px solid $portfolio-primary;
+  @include accent-border;
   text-decoration: none;
   @include transition-moderate;
   
   &:hover {
     transform: translateX(4px);
-    border-left-color: $portfolio-accent-cyan;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     
     .contact-link__icon {

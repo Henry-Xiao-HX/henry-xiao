@@ -23,7 +23,7 @@
   
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: $shadow-md;
   }
 }
 
@@ -42,6 +42,32 @@
     color: $color;
     font-weight: bold;
   }
+}
+
+// Accent left-border with colour swap on hover
+// Used by project tiles, article cards, architecture cards, contact links, focus-area items.
+// Usage: @include accent-border;
+//        @include accent-border($portfolio-accent-cyan, $portfolio-primary);
+@mixin accent-border($color: $portfolio-primary, $hover: $portfolio-accent-cyan) {
+  border-left: 4px solid $color;
+
+  &:hover {
+    border-left-color: $hover;
+  }
+}
+
+// Divider gradient — transparent fade-in/out on both sides around a solid colour.
+// Used by .view-all-divider::before (default purple) and overridden in Writing (cyan).
+// Usage: @include divider-gradient;
+//        @include divider-gradient($portfolio-accent-cyan);
+@mixin divider-gradient($color: $portfolio-primary) {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    $color 20%,
+    $color 80%,
+    transparent 100%
+  );
 }
 
 // Made with Bob

@@ -17,12 +17,8 @@
 
 .project-tile {
   @include transition-moderate;
+  @include accent-border;
   background-color: $portfolio-bg-layer-1;
-  border-left: 4px solid $portfolio-primary;
-  
-  &:hover {
-    border-left-color: $portfolio-accent-cyan;
-  }
   
   .project-tile__header {
     display: flex;

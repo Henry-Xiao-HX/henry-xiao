@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Grid, Column, Layer } from '@carbon/react';
 import { CheckmarkFilled } from '@carbon/icons-react';
 import { milestones } from '../../data/siteData';
@@ -11,12 +11,13 @@ const Milestones = () => {
     setSelectedMilestone(selectedMilestone?.id === milestone.id ? null : milestone);
   };
 
-  // Sort milestones chronologically (oldest to newest)
-  const sortedMilestones = [...milestones.items].sort((a, b) => {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-    return dateA - dateB;
-  });
+  // Sort milestones chronologically (oldest to newest).
+  // Wrapped in useMemo: milestones.items is a static constant so the sort
+  // only needs to run once, not on every selectedMilestone state change.
+  const sortedMilestones = useMemo(
+    () => [...milestones.items].sort((a, b) => new Date(a.date) - new Date(b.date)),
+    []
+  );
 
   // Calculate dynamic positioning based on number of milestones
   const calculatePosition = (index, total) => {

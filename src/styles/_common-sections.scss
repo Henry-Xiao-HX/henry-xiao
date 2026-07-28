@@ -3,6 +3,7 @@
 @use '@carbon/react/scss/breakpoint' as *;
 @use '@carbon/react/scss/type' as *;
 @use './variables' as *;
+@use './mixins' as *;
 
 // Shared section heading used by About, Expertise, Contact, Milestones, etc.
 .section-title {
@@ -66,13 +67,7 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      $portfolio-primary 20%,
-      $portfolio-primary 80%,
-      transparent 100%
-    );
+    @include divider-gradient;
     opacity: 0.3;
   }
   

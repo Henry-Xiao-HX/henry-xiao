@@ -7,14 +7,12 @@ import './PageLayout.scss';
  * Renders a breadcrumb, page title, subtitle, and any children below.
  *
  * Props:
- *   title    – <h1> text
- *   subtitle – descriptive paragraph below the title
- *   crumb    – current page breadcrumb label (e.g. "Projects")
- *   children – page-specific content rendered below the header
- */
-/**
- * headerExtra – optional ReactNode rendered beside the title/subtitle
- *               (e.g. a view-toggle button group)
+ *   title       – <h1> text
+ *   subtitle    – descriptive paragraph below the title
+ *   crumb       – current page breadcrumb label (e.g. "Projects")
+ *   children    – page-specific content rendered below the header
+ *   headerExtra – optional ReactNode rendered beside the title/subtitle
+ *                 (e.g. a view-toggle button group)
  */
 const PageLayout = ({ title, subtitle, crumb, headerExtra, children }) => (
   <div className="page-layout">

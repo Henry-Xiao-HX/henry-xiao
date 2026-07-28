@@ -3,20 +3,15 @@ import { Email, LogoLinkedin, LogoGithub, Edit } from '@carbon/icons-react';
 import { contact } from '../../data/siteData';
 import './Contact.scss';
 
+// Resolve icon components once at module load time — contact.links is a static
+// constant so this never needs to re-run inside the component.
+const iconMap = { Email, LogoLinkedin, LogoGithub, Edit };
+const contactLinks = contact.links.map(link => ({
+  ...link,
+  icon: iconMap[link.icon],
+}));
+
 const Contact = () => {
-  // Map icon names to icon components
-  const iconMap = {
-    Email,
-    LogoLinkedin,
-    LogoGithub,
-    Edit,
-  };
-
-  const contactLinks = contact.links.map(link => ({
-    ...link,
-    icon: iconMap[link.icon],
-  }));
-
   return (
     <section id="contact" className="contact-section portfolio-section">
       <Grid>

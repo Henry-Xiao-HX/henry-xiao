@@ -4,7 +4,6 @@
 @use '@carbon/react/scss/breakpoint' as *;
 @use '@carbon/react/scss/type' as *;
 @use '@carbon/react/scss/theme' as *;
-@use '@carbon/colors' as *;
 
 .hero-section {
   background: $background;
@@ -59,7 +58,7 @@
   padding: $spacing-02 $spacing-04;
   background: $portfolio-primary;
   border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(15, 98, 254, 0.15);
+  box-shadow: $shadow-primary-sm;
 }
 
 .hero-title {
@@ -103,14 +102,14 @@
   border: 1px solid $border-subtle-01;
   border-left: 4px solid $portfolio-primary;
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: $shadow-sm;
   @include transition-moderate;
 
   &:hover {
     background: $background;
-    border-left-color: $blue-70;
+    border-left-color: $portfolio-hover;
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(15, 98, 254, 0.15);
+    box-shadow: $shadow-primary-md;
   }
 }
 
@@ -153,9 +152,9 @@
     &:hover {
       color: $portfolio-primary;
       transform: translateX(4px);
-      
+
       &::before {
-        color: $blue-70;
+        color: $portfolio-hover;
       }
     }
   }
@@ -174,12 +173,12 @@
       background-color: $portfolio-primary;
       color: $text-inverse;
       border: none;
-      box-shadow: 0 2px 8px rgba(15, 98, 254, 0.2);
-      
+      box-shadow: $shadow-primary-sm;
+
       &:hover {
-        background-color: $blue-70;
+        background-color: $portfolio-hover;
         transform: translateY(-2px);
-        box-shadow: 0 4px 16px rgba(15, 98, 254, 0.3);
+        box-shadow: $shadow-primary-lg;
       }
       
       &:active {
@@ -193,13 +192,13 @@
       border: 2px solid $portfolio-primary;
       
       &:hover {
-        background-color: $blue-10;
-        border-color: $blue-70;
-        color: $blue-70;
+        background-color: $portfolio-ghost-hover-bg;
+        border-color: $portfolio-hover;
+        color: $portfolio-hover;
       }
-      
+
       &:active {
-        background-color: $blue-20;
+        background-color: $portfolio-ghost-active-bg;
       }
     }
   }
@@ -229,13 +228,13 @@
   border-left: 4px solid $portfolio-primary;
   border-radius: 4px;
   @include transition-moderate;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  
+  box-shadow: $shadow-sm;
+
   &:hover {
     background: $background;
-    border-left-color: $blue-70;
+    border-left-color: $portfolio-hover;
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(15, 98, 254, 0.15);
+    box-shadow: $shadow-primary-md;
   }
 }
 

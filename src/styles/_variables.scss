@@ -29,4 +29,20 @@ $portfolio-text-inverse: $text-inverse;
 // Gradients
 $portfolio-gradient-subtle: linear-gradient(180deg, rgba($portfolio-primary, 0.1) 0%, rgba($portfolio-accent-cyan, 0.1) 100%);
 
+// Hover accent color (one step darker than primary — used for border / bg hover states)
+$portfolio-hover: $purple-70;
+// Ghost button hover background tints
+$portfolio-ghost-hover-bg:     rgba($purple-60, 0.1);
+$portfolio-ghost-active-bg:    rgba($purple-60, 0.2);
+
+// Elevation / shadow scale
+// Use these instead of hard-coded rgba() values throughout component SCSS.
+$shadow-sm:         0 2px 8px  rgba(0, 0, 0, 0.1);
+$shadow-md:         0 4px 16px rgba(0, 0, 0, 0.15);
+$shadow-lg:         0 8px 24px rgba(0, 0, 0, 0.12);
+$shadow-primary-sm: 0 2px 8px  rgba($portfolio-primary, 0.15);
+$shadow-primary-md: 0 4px 16px rgba($portfolio-primary, 0.15);
+$shadow-primary-lg: 0 4px 16px rgba($portfolio-primary, 0.3);
+$shadow-cyan-lg:    0 8px 24px rgba($cyan-50, 0.2);
+
 // Made with Bob

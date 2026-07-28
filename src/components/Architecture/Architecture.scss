@@ -20,15 +20,11 @@
 // ArchitecturePage.scss only adds layout-specific overrides on top of these rules.
 .architecture-card {
   @include hover-lift;
+  @include accent-border;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   background-color: $portfolio-bg-layer-1;
-  border-left: 4px solid $portfolio-primary;
-
-  &:hover {
-    border-left-color: $portfolio-accent-cyan;
-  }
 
   // ── image container ──────────────────────────────────────────────────────
   &__image-container {
