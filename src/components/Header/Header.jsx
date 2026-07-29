@@ -14,7 +14,7 @@ import {
   SideNavItems,
   HeaderSideNavItems,
 } from '@carbon/react';
-import { LogoGithub, LogoLinkedin } from '@carbon/icons-react';
+import { LogoGithub, LogoLinkedin, Document } from '@carbon/icons-react';
 import { personalInfo } from '../../data/siteData';
 import './Header.scss';
 
@@ -88,6 +88,13 @@ const PortfolioHeader = () => {
             </HeaderNavigation>
 
             <HeaderGlobalBar>
+              <HeaderGlobalAction
+                aria-label="Resume"
+                tooltipAlignment="end"
+                onClick={() => window.open(`${import.meta.env.BASE_URL}Henry%20Xiao%20-%20Resume.pdf`, '_blank')}
+              >
+                <Document size={20} />
+              </HeaderGlobalAction>
               <HeaderGlobalAction
                 aria-label="GitHub Profile"
                 tooltipAlignment="end"

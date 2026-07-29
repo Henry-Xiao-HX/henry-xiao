@@ -46,7 +46,14 @@
     }
   }
   
+  // Ensure global action bar (icons) is always visible alongside the nav
+  .cds--header__nav {
+    flex-shrink: 1;
+    overflow: hidden;
+  }
+
   .cds--header__global {
+    flex-shrink: 0;
     .cds--header__action {
       color: $portfolio-text-primary;
       @include transition-fast;
