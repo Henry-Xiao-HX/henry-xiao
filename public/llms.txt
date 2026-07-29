@@ -3,7 +3,7 @@
 ## Identity
 Name: Henry Xiao
 Role: Data and AI Customer Success Engineer @ IBM Financial Services Market (FSM)
-Community Lead: IBM FSM CSE Agentic Center of Excellence
+Tech Lead: IBM FSM CSE Agentic Center of Excellence
 Location: San Francisco Bay Area
 Email: henryxiao2001@gmail.com
 
