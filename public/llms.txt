@@ -1,0 +1,82 @@
+# Henry Xiao — Agent Builder & Data AI Engineer
+
+## Identity
+Name: Henry Xiao
+Role: Data and AI Customer Success Engineer @ IBM Financial Services Market (FSM)
+Community Lead: IBM FSM CSE Agentic Center of Excellence
+Location: San Francisco Bay Area
+Email: henryxiao2001@gmail.com
+
+## About
+Henry Xiao is a Data & AI Customer Success Engineer at IBM, focused on helping organizations adopt and accelerate Data & AI solutions — from modernizing data architectures to implementing Agentic AI capabilities that drive operational efficiency, strengthen risk management, and support regulatory compliance. His approach is modular, open architecture that bridges agentic innovation with engineering rigor.
+
+## Areas of Expertise
+
+### Agentic AI
+Demystifying agentic AI for data engineers by bridging innovation with engineering rigor through modular, open architectures that preserve determinism, reproducibility, and control.
+Skills: LangChain, Anthropic Claude, OpenAI, IBM watsonx, IBM Bob
+
+### Data Integration & Intelligence
+Championing agentic data engineering as an execution model using MCP servers and AI orchestration across Batch ETL, real-time data streaming, Change Data Capture (CDC), and other integration modes.
+Skills: Confluent Kafka, IBM DataStage, IBM watsonx.data integration, IBM watsonx.data intelligence
+
+### Enterprise Governance
+Positioning governed, explainable agentic workflows through human-in-the-loop approvals, guardrails, and standardized configurations that maintain engineering-friendly transparency.
+
+### Customer Success & Enablement
+Competitive analysis, business value articulation, client co-creation, and sales enablement.
+
+## Projects
+
+### FSM CSE IBM Bob Community Hub (2026) — IBM Internal
+Enterprise AI enablement platform for FSM Data & AI Customer Success Engineers. Agentic Center of Excellence with 25+ integration patterns across 10+ IBM products. 40+ contributors.
+Status: In Production
+
+### CSE LLM Wiki (2026)
+Specialized productivity tool for CSE teams. Custom IBM Bob mode/skill that helps CSEs track technology, client information, and contract details. Implements the LLM Wiki pattern popularized by Andrej Karpathy.
+GitHub: https://github.com/Henry-Xiao-HX/CSE-LLM-WIKI
+Status: Active
+
+### Personal Chef Agent (2026)
+Demo minimum configuration for AI agents built with Python and LangChain. Demonstrates conversation memory, context management, and practical agentic AI patterns.
+GitHub: https://github.com/Henry-Xiao-HX/personal-chef-agent
+Status: Demo
+
+### Banking Application with Carbon Design (2026)
+Demo banking application built with IBM Carbon Design System. Not affiliated with IBM.
+GitHub: https://github.com/Henry-Xiao-HX/Bob-and-Carbon-Design-System
+Status: Demo
+
+## Published Articles
+
+### Metadata-Driven Context Engineering (March 6, 2026) — 8 min read
+How context engineering, enabled with governed metadata, allows enterprise agents to reason effectively without context pollution or information overload.
+Tags: AI, Data Engineering, Metadata, Context Management
+URL: https://medium.com/@henry-xiao-hx/metadata-driven-context-engineering-for-ai-agents-a67446ff4ba1
+
+### Applying Karpathy's LLM Wiki Pattern (April 27, 2026) — 6 min read
+Building a compounding knowledge base for tech sellers with IBM Bob. Knowledge management patterns for Customer Success Engineers.
+Tags: Knowledge Management, RAG, Information Architecture, AI Systems
+URL: https://levelup.gitconnected.com/applying-karpathys-llm-wiki-pattern-building-a-compounding-knowledge-base-for-tech-sellers-with-fef594872168
+
+### Data Pipeline Optimization with Karpathy Autoresearch and IBM Bob (April 8, 2026) — 6 min read
+How an autonomous agent (IBM Bob) can optimize data pipelines by navigating trade-offs between speed, cloud cost, and resource utilization.
+Tags: Data Optimization, Agentic AI, Andrej Karpathy, IBM Bob
+URL: https://levelup.gitconnected.com/data-pipeline-optimization-with-karpathy-autoresearch-and-ibm-bob-8cc9c9c3017d
+
+## Speaking & Milestones (2026)
+
+- June 2026: Presented at FSM Data & AI SME Think Tank (150+ participants across CSEs, managers, sales leads, product SMEs). Launched IBM Bob Community Hub.
+- May 2026: Launched IBM Bob Community Hub — central repository for IBM Bob integration patterns with 25+ demo assets, 10+ products, 40+ contributors.
+- May 2026: Presented at Worldwide DII CSE Office Hour to 80+ Data Integration and Intelligence CSEs across IBM markets. Topic: LLM Wiki pattern with IBM Bob.
+- May 2026: Presented at Bay Area AI Think Tank (30+ developers, designers, and CSEs). Topic: LLM Wiki pattern with IBM Bob.
+- April 2026: Presented "Bob in the Field" FSM Enablement — leveraging IBM Bob with watsonx.data intelligence/integration MCP servers for Agentic Data Engineering.
+- March 2026: Presented at FSM DII CSE Office Hour — watsonx.data intelligence MCP with IBM Bob for context engineering and metadata governance.
+- Q1 2026: Featured on FSM Technical Sales Brief for contributions on Agentic Data Engineering (pipeline design, data quality management, root cause analysis).
+
+## Links
+Website: https://henry-xiao-hx.github.io/henry-xiao/
+GitHub: https://github.com/Henry-Xiao-HX
+LinkedIn: https://linkedin.com/in/henry-xiao-hx/
+Medium: https://medium.com/@henry-xiao-hx
+Resume: https://henry-xiao-hx.github.io/henry-xiao/Henry%20Xiao%20-%20Resume.pdf
